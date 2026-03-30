@@ -3,46 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SE Midterm Rescue 2026</title>
+<title>SE Final Rescue 2026</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&family=Tajawal:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      fontFamily: {
-        cairo: ['Cairo', 'sans-serif'],
-        tajawal: ['Tajawal', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
-      }
-    }
-  }
-}
-</script>
+<script>tailwind.config={theme:{extend:{fontFamily:{cairo:['Cairo','sans-serif'],tajawal:['Tajawal','sans-serif'],mono:['JetBrains Mono','monospace']}}}}</script>
 <style>
-:root {
-  --bg:#070d1a;--bg2:#0b1221;--bg3:#0f1929;--card:#111f35;--card2:#162540;
-  --border:#1a2e4a;--border2:#213860;--text:#dde8f8;--text2:#8aadcf;--text3:#4a6d90;
-  --blue:#3b82f6;--blue2:#60a5fa;--green:#10b981;--green2:#34d399;
-  --yellow:#f59e0b;--yellow2:#fbbf24;--red:#ef4444;--red2:#f87171;
-  --purple:#8b5cf6;--purple2:#a78bfa;--teal:#06b6d4;--teal2:#22d3ee;
-  --orange:#f97316;--orange2:#fb923c;--pink:#ec4899;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+:root{--bg:#070d1a;--bg2:#0b1221;--bg3:#0f1929;--card:#111f35;--card2:#162540;--border:#1a2e4a;--border2:#213860;--text:#dde8f8;--text2:#8aadcf;--text3:#4a6d90;--blue:#3b82f6;--blue2:#60a5fa;--green:#10b981;--green2:#34d399;--yellow:#f59e0b;--yellow2:#fbbf24;--red:#ef4444;--red2:#f87171;--purple:#8b5cf6;--purple2:#a78bfa;--teal:#06b6d4;--teal2:#22d3ee;--orange:#f97316;--orange2:#fb923c;--pink:#ec4899}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
-
-/* SCROLLBAR */
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--blue);border-radius:4px}
-
-/* TOP PROGRESS BAR */
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--blue);border-radius:4px}
 #prog-bar{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--teal),var(--purple));width:0%;z-index:9999;transition:width .1s}
-
-/* NAV */
 nav{position:fixed;top:2px;left:0;right:0;z-index:1000;background:rgba(7,13,26,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
 .nav-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:.75rem;height:56px;padding:0 1.25rem}
 .nav-logo{font-family:'Tajawal',sans-serif;font-weight:900;font-size:.95rem;background:linear-gradient(135deg,var(--blue2),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap;flex-shrink:0}
@@ -54,26 +26,17 @@ nav{position:fixed;top:2px;left:0;right:0;z-index:1000;background:rgba(7,13,26,.
 .search-wrap{display:flex;align-items:center;gap:.4rem;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.26rem .7rem;min-width:130px;flex-shrink:0}
 .search-wrap input{background:none;border:none;outline:none;color:var(--text);font-family:'Cairo',sans-serif;font-size:.78rem;width:100%}
 .search-wrap input::placeholder{color:var(--text3)}
-
-/* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:5rem 1rem 3rem}
-.hero-mesh{position:absolute;inset:0;background:
-  radial-gradient(ellipse 70% 50% at 50% 10%,rgba(59,130,246,.14) 0%,transparent 60%),
-  radial-gradient(ellipse 50% 40% at 15% 80%,rgba(139,92,246,.09) 0%,transparent 50%),
-  radial-gradient(ellipse 40% 40% at 85% 60%,rgba(6,182,212,.08) 0%,transparent 50%);
-  pointer-events:none}
+.hero-mesh{position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 10%,rgba(59,130,246,.14) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 15% 80%,rgba(139,92,246,.09) 0%,transparent 50%),radial-gradient(ellipse 40% 40% at 85% 60%,rgba(6,182,212,.08) 0%,transparent 50%);pointer-events:none}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(59,130,246,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,.03) 1px,transparent 1px);background-size:60px 60px;pointer-events:none}
 .badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);color:var(--blue2);padding:.3rem 1rem;border-radius:20px;font-size:.8rem;margin-bottom:1.5rem}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}
-.blink{animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.4}}.blink{animation:blink 1.8s infinite}
 .hero h1{font-family:'Tajawal',sans-serif;font-size:clamp(1.9rem,6vw,3.6rem);font-weight:900;line-height:1.15;margin-bottom:1rem}
 .grad-blue{background:linear-gradient(135deg,#fff 0%,var(--blue2) 50%,var(--teal2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .grad-purple{background:linear-gradient(135deg,var(--purple2),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero-sub{font-size:.97rem;color:var(--text2);max-width:560px;margin:0 auto 1.2rem}
 .hero-note{background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.2);border-radius:10px;padding:.7rem 1.1rem;max-width:600px;margin:0 auto 2rem;color:var(--green2);font-size:.84rem;text-align:right}
 .hero-btns{display:flex;flex-wrap:wrap;gap:.65rem;justify-content:center;margin-bottom:2.5rem}
-
-/* BUTTONS */
 .btn{padding:.55rem 1.3rem;border-radius:8px;font-family:'Cairo',sans-serif;font-weight:700;font-size:.85rem;cursor:pointer;text-decoration:none;border:none;transition:all .25s;display:inline-flex;align-items:center;gap:.4rem}
 .btn-primary{background:linear-gradient(135deg,var(--blue),var(--teal));color:#fff;box-shadow:0 4px 18px rgba(59,130,246,.3)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(59,130,246,.45)}
@@ -83,39 +46,27 @@ nav{position:fixed;top:2px;left:0;right:0;z-index:1000;background:rgba(7,13,26,.
 .btn-danger:hover{transform:translateY(-2px)}
 .btn-purple{background:linear-gradient(135deg,var(--purple),var(--pink));color:#fff}
 .btn-purple:hover{transform:translateY(-2px)}
-.btn-teal{background:linear-gradient(135deg,var(--teal),var(--blue));color:#fff}
-.btn-teal:hover{transform:translateY(-2px)}
-
-/* TIME CARDS */
 .time-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.85rem;max-width:520px;margin:0 auto}
 .time-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:.9rem;text-align:center}
 .time-num{font-size:1.6rem;font-weight:900;background:linear-gradient(135deg,var(--blue),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .time-label{font-size:.72rem;color:var(--text2);margin-top:.15rem}
-
-/* SECTIONS */
 .section{max-width:1160px;margin:0 auto;padding:3rem 1.25rem}
 .sec-title{font-family:'Tajawal',sans-serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:800;margin-bottom:.35rem;display:flex;align-items:center;gap:.6rem}
 .sec-title .hi{background:linear-gradient(135deg,var(--blue),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .sec-sub{color:var(--text2);margin-bottom:1.75rem;font-size:.9rem}
 .divider{border:none;height:1px;background:linear-gradient(90deg,transparent,var(--border2),transparent);margin:2rem 0}
-
-/* ROADMAP */
 .rm-wrap{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem;overflow-x:auto}
 .roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:center;justify-content:center;padding:.5rem 0}
 .rm-item{display:flex;flex-direction:column;align-items:center;gap:.4rem}
 .rm-circle{width:66px;height:66px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.65rem;text-align:center;font-weight:700;border:2px solid;line-height:1.2;padding:.3rem}
 .rm-arrow{width:32px;height:2px;background:linear-gradient(90deg,var(--blue),var(--teal));margin-top:-26px;flex-shrink:0}
 .rm-label{font-size:.64rem;color:var(--text2);text-align:center;max-width:72px}
-
-/* PROGRESS */
 .prog-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem;margin-bottom:1.75rem}
 .prog-bar-wrap{height:6px;background:var(--bg3);border-radius:4px;overflow:hidden}
 .prog-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .5s ease}
 .topic-checks{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:.9rem}
 .topic-check{padding:.28rem .75rem;border-radius:20px;border:1px solid var(--border2);background:var(--bg3);color:var(--text2);cursor:pointer;font-size:.75rem;font-family:'Cairo',sans-serif;transition:all .2s}
 .topic-check.done{background:rgba(16,185,129,.1);border-color:var(--green);color:var(--green2)}
-
-/* TOPIC CARDS */
 .topics-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.1rem}
 .topic-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
 .topic-card:hover{border-color:var(--border2);box-shadow:0 4px 20px rgba(59,130,246,.08)}
@@ -128,8 +79,6 @@ nav{position:fixed;top:2px;left:0;right:0;z-index:1000;background:rgba(7,13,26,.
 .topic-body{display:none;padding:0 1.15rem 1.15rem;border-top:1px solid var(--border);padding-top:.95rem}
 .topic-card.open .chevron{transform:rotate(180deg)}
 .topic-card.open .topic-body{display:block}
-
-/* CONTENT BOXES */
 .def-box{background:rgba(59,130,246,.06);border-right:3px solid var(--blue);border-radius:0 8px 8px 0;padding:.65rem .9rem;margin-bottom:.85rem;font-size:.86rem}
 .exam-box{background:rgba(245,158,11,.06);border-right:3px solid var(--yellow);border-radius:0 8px 8px 0;padding:.65rem .9rem;margin-bottom:.85rem;font-size:.85rem}
 .exam-box .lbl{color:var(--yellow);font-weight:700;font-size:.75rem;margin-bottom:.2rem}
@@ -141,30 +90,16 @@ nav{position:fixed;top:2px;left:0;right:0;z-index:1000;background:rgba(7,13,26,.
 .ex-box .lbl{color:var(--purple2);font-weight:700;font-size:.75rem;margin-bottom:.2rem}
 .info-box{background:rgba(6,182,212,.06);border-right:3px solid var(--teal);border-radius:0 8px 8px 0;padding:.65rem .9rem;margin-bottom:.85rem;font-size:.85rem}
 .info-box .lbl{color:var(--teal2);font-weight:700;font-size:.75rem;margin-bottom:.2rem}
-
-/* CHIP */
 .chip{display:inline-block;padding:.16rem .52rem;border-radius:4px;font-size:.69rem;font-weight:700;margin:.1rem}
-.chip-blue{background:rgba(59,130,246,.15);color:var(--blue2)}
-.chip-green{background:rgba(16,185,129,.15);color:var(--green2)}
-.chip-yellow{background:rgba(245,158,11,.15);color:var(--yellow2)}
-.chip-red{background:rgba(239,68,68,.12);color:var(--red2)}
-.chip-purple{background:rgba(139,92,246,.15);color:var(--purple2)}
-.chip-teal{background:rgba(6,182,212,.15);color:var(--teal2)}
-.chip-pink{background:rgba(236,72,153,.12);color:var(--pink)}
-
-/* LISTS */
+.chip-blue{background:rgba(59,130,246,.15);color:var(--blue2)}.chip-green{background:rgba(16,185,129,.15);color:var(--green2)}.chip-yellow{background:rgba(245,158,11,.15);color:var(--yellow2)}.chip-red{background:rgba(239,68,68,.12);color:var(--red2)}.chip-purple{background:rgba(139,92,246,.15);color:var(--purple2)}.chip-teal{background:rgba(6,182,212,.15);color:var(--teal2)}.chip-pink{background:rgba(236,72,153,.12);color:var(--pink)}
 ul.clist{list-style:none;padding:0;margin-bottom:.85rem}
 ul.clist li{padding:.24rem 0 .24rem 1.35rem;position:relative;font-size:.84rem;color:var(--text2)}
 ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);font-size:.7rem;top:.28rem}
-
-/* TABLE */
 .v-table{width:100%;border-collapse:collapse;font-size:.8rem;margin:.7rem 0}
 .v-table th{background:var(--bg3);color:var(--blue2);padding:.45rem .7rem;border:1px solid var(--border);text-align:center;font-weight:700}
 .v-table td{padding:.4rem .7rem;border:1px solid var(--border);color:var(--text2);vertical-align:top}
 .v-table tr:nth-child(even) td{background:rgba(59,130,246,.025)}
 .v-table td:first-child{color:var(--yellow2);font-weight:600;font-size:.77rem}
-
-/* COMPARISONS */
 .comp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:1.1rem}
 .comp-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
 .comp-title{padding:.65rem 1rem;font-weight:700;font-size:.86rem;background:var(--card2);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem}
@@ -174,15 +109,10 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 .comp-table tr:last-child td{border-bottom:none}
 .comp-table td:first-child{color:var(--blue2);font-weight:600}
 .comp-table td:last-child{color:var(--text2)}
-
-/* TABS */
 .tabs{display:flex;gap:.4rem;margin-bottom:1.15rem;flex-wrap:wrap}
 .tab-btn{padding:.38rem .9rem;border-radius:8px;background:var(--card);border:1px solid var(--border);color:var(--text2);cursor:pointer;font-family:'Cairo',sans-serif;font-size:.8rem;transition:all .2s}
 .tab-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
-.tab-pane{display:none}
-.tab-pane.active{display:block}
-
-/* T/F */
+.tab-pane{display:none}.tab-pane.active{display:block}
 .tf-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1.1rem}
 .tf-stmt{font-size:.87rem;margin-bottom:.42rem}
 .tf-toggle{padding:.25rem .75rem;border-radius:6px;background:var(--card2);border:1px solid var(--border2);color:var(--text2);cursor:pointer;font-family:'Cairo',sans-serif;font-size:.75rem}
@@ -190,8 +120,6 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 .tf-answer.show{display:block}
 .tf-true{background:rgba(16,185,129,.1);color:var(--green2);border-right:3px solid var(--green)}
 .tf-false{background:rgba(239,68,68,.08);color:var(--red2);border-right:3px solid var(--red)}
-
-/* MCQ */
 .mcq-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.1rem;margin-bottom:.85rem}
 .mcq-q{font-weight:700;font-size:.9rem;margin-bottom:.85rem;line-height:1.6}
 .mcq-options{display:flex;flex-direction:column;gap:.42rem}
@@ -203,136 +131,90 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 .mcq-explain{margin-top:.6rem;font-size:.78rem;color:var(--text2);background:var(--bg3);border-radius:6px;padding:.5rem .75rem;border-right:3px solid var(--blue);display:none}
 .mcq-explain.show{display:block}
 .mcq-tag{display:inline-block;font-size:.67rem;color:var(--text3);background:var(--bg3);border-radius:4px;padding:.08rem .4rem;margin-bottom:.42rem}
-
-/* ESSAY */
 .essay-card{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:.85rem}
 .essay-q{padding:.9rem 1.15rem;font-weight:700;font-size:.86rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;user-select:none}
 .essay-body{display:none;padding:1rem 1.15rem;border-top:1px solid var(--border);font-size:.84rem;color:var(--text2);line-height:1.85}
 .essay-card.open .essay-body{display:block}
-
-/* TRAPS */
 .traps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.9rem}
 .trap-card{background:linear-gradient(135deg,rgba(239,68,68,.06),rgba(249,115,22,.03));border:1px solid rgba(239,68,68,.18);border-radius:14px;padding:1.1rem}
 .trap-title{color:var(--red2);font-weight:700;font-size:.86rem;margin-bottom:.42rem;display:flex;align-items:center;gap:.4rem}
 .trap-fix{color:var(--green2);font-size:.78rem;background:rgba(16,185,129,.06);border-radius:6px;padding:.35rem .6rem;margin-top:.42rem}
-
-/* SUMMARY */
 .summary-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.9rem}
 .summary-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:.9rem}
 .summary-card h4{font-size:.85rem;font-weight:700;margin-bottom:.6rem;color:var(--blue2);display:flex;align-items:center;gap:.4rem}
-
-/* SMART */
 .smart-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.65rem;margin-bottom:.9rem}
 .smart-card{background:var(--bg3);border-radius:8px;padding:.65rem .8rem;font-size:.82rem;display:flex;align-items:flex-start;gap:.55rem}
 .smart-letter{font-size:1.35rem;font-weight:900;line-height:1;flex-shrink:0}
-
-/* MOSCOW */
 .moscow-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.65rem;margin-bottom:.9rem}
 .moscow-card{border-radius:10px;padding:.8rem .95rem;border:1px solid;font-size:.82rem}
-
-/* UML */
 .uml-diag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:.7rem;margin:.7rem 0}
 .uml-diag-card{border-radius:10px;padding:.8rem .95rem;border:1px solid;font-size:.81rem}
 .uml-struct{background:rgba(59,130,246,.07);border-color:rgba(59,130,246,.23)}
 .uml-behav{background:rgba(16,185,129,.07);border-color:rgba(16,185,129,.23)}
 .uml-inter{background:rgba(139,92,246,.07);border-color:rgba(139,92,246,.23)}
 .uml-diag-title{font-weight:800;font-size:.88rem;margin-bottom:.38rem}
-
-/* SRS USERS */
 .srs-users{display:flex;flex-direction:column;gap:.55rem;margin:.7rem 0}
 .srs-user{display:flex;gap:.7rem;align-items:flex-start;background:var(--bg3);border-radius:8px;padding:.65rem .85rem}
 .srs-role{min-width:105px;font-weight:700;font-size:.79rem;color:var(--blue2)}
 .srs-desc{font-size:.79rem;color:var(--text2)}
-
-/* CLASS DIAGRAM SPECIFIC */
 .class-box{background:var(--bg3);border:1px solid var(--border2);border-radius:8px;overflow:hidden;font-size:.8rem;margin:.5rem 0}
 .class-name{background:rgba(59,130,246,.12);padding:.4rem .7rem;font-weight:700;color:var(--blue2);text-align:center;font-size:.82rem;border-bottom:1px solid var(--border)}
 .class-attrs{padding:.4rem .7rem;border-bottom:1px solid var(--border)}
 .class-ops{padding:.4rem .7rem}
 .class-attr{color:var(--text2);padding:.08rem 0;font-size:.75rem;font-family:'JetBrains Mono',monospace}
-.vis-plus{color:var(--green2)}
-.vis-minus{color:var(--red2)}
-.vis-hash{color:var(--yellow2)}
-
-/* RELATIONS */
+.vis-plus{color:var(--green2)}.vis-minus{color:var(--red2)}.vis-hash{color:var(--yellow2)}
 .relation-card{background:var(--bg3);border-radius:8px;padding:.65rem .85rem;font-size:.82rem;border-right:3px solid;margin-bottom:.6rem}
-
-/* FILTER BTNS */
 .filter-btn{padding:.28rem .75rem;border-radius:20px;border:1px solid var(--border2);background:var(--card);color:var(--text2);cursor:pointer;font-family:'Cairo',sans-serif;font-size:.75rem;transition:all .2s}
 .filter-btn:hover,.filter-btn.active{background:var(--blue);border-color:var(--blue);color:#fff}
 .score-box{background:var(--card2);border:1px solid var(--border2);border-radius:8px;padding:.4rem .85rem;font-weight:700;color:var(--blue2);font-size:.84rem}
-
-/* LAB */
 .lab-step{display:flex;gap:.8rem;align-items:flex-start}
 .step-num{min-width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.76rem;flex-shrink:0;margin-top:.1rem}
 .step-content{font-size:.84rem;color:var(--text2)}
 .step-content strong{color:var(--text)}
-
-/* BACK TOP */
 #back-top{position:fixed;bottom:1.75rem;left:1.5rem;width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));border:none;color:#fff;cursor:pointer;font-size:1rem;display:none;align-items:center;justify-content:center;z-index:999;transition:transform .2s;box-shadow:0 4px 14px rgba(59,130,246,.35)}
 #back-top:hover{transform:scale(1.1)}
 #back-top.show{display:flex}
-
-/* NOTIFY */
 #notify{position:fixed;bottom:1rem;right:1rem;background:var(--green);color:#fff;padding:.5rem 1rem;border-radius:8px;font-size:.8rem;font-weight:600;transform:translateY(80px);opacity:0;transition:all .3s;z-index:9999}
 #notify.show{transform:translateY(0);opacity:1}
-
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .reveal.visible{opacity:1;transform:none}
-
-/* RECIPE */
 .recipe-steps{counter-reset:step;list-style:none;padding:0}
 .recipe-steps li{counter-increment:step;padding:.35rem 0 .35rem 1.85rem;font-size:.82rem;color:var(--text2);position:relative}
 .recipe-steps li::before{content:counter(step);position:absolute;right:0;top:.35rem;width:19px;height:19px;border-radius:50%;background:var(--blue);color:#fff;font-size:.65rem;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Cairo',sans-serif}
-
-/* VISIBILITY TABLE */
 .vis-table{width:100%;border-collapse:collapse;font-size:.78rem;margin:.7rem 0}
 .vis-table th{background:var(--bg3);color:var(--teal2);padding:.42rem .65rem;border:1px solid var(--border);font-weight:700;text-align:center}
 .vis-table td{padding:.38rem .65rem;border:1px solid var(--border);color:var(--text2);text-align:center}
-.yes-cell{color:var(--green2);font-weight:700}
-.no-cell{color:var(--red2);font-weight:700}
-.cond-cell{color:var(--yellow2);font-size:.72rem}
-
-/* MULTIPLICITY */
+.yes-cell{color:var(--green2);font-weight:700}.no-cell{color:var(--red2);font-weight:700}.cond-cell{color:var(--yellow2);font-size:.72rem}
 .multi-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.55rem;margin:.6rem 0}
 .multi-item{background:var(--bg3);border-radius:8px;padding:.55rem .75rem;font-size:.8rem;display:flex;gap:.55rem;align-items:center}
 .multi-sym{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--yellow2);font-size:.85rem;min-width:60px}
-
-/* SEQUENCE DIAGRAM NOTATIONS */
 .seq-notations{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.65rem;margin:.7rem 0}
 .seq-note{background:var(--bg3);border-radius:8px;padding:.65rem .85rem;font-size:.82rem;border-right:3px solid var(--teal)}
 .seq-note-title{font-weight:700;color:var(--teal2);margin-bottom:.25rem;font-size:.84rem}
-
-/* FRAGMENT TYPES */
 .frag-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.65rem;margin:.7rem 0}
 .frag-card{border-radius:10px;padding:.75rem .9rem;border:1px solid;font-size:.81rem}
 .frag-alt{background:rgba(245,158,11,.07);border-color:rgba(245,158,11,.22)}
 .frag-loop{background:rgba(59,130,246,.07);border-color:rgba(59,130,246,.22)}
 .frag-opt{background:rgba(16,185,129,.07);border-color:rgba(16,185,129,.22)}
 .frag-title{font-weight:800;font-size:.9rem;margin-bottom:.35rem;font-family:'JetBrains Mono',monospace}
-
-@media(max-width:768px){
-  .nav-links{display:none}
-  .topics-grid{grid-template-columns:1fr}
-  .comp-grid{grid-template-columns:1fr}
-  .traps-grid{grid-template-columns:1fr}
-  .summary-grid{grid-template-columns:1fr}
-}
-@media print{
-  nav,#back-top,#prog-bar{display:none}
-  .topic-body,.essay-body{display:block!important}
-}
+/* CMM levels */
+.cmm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.65rem;margin:.7rem 0}
+.cmm-card{border-radius:10px;padding:.8rem .95rem;border:1px solid;font-size:.81rem}
+/* Maintenance types */
+.maint-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:.65rem;margin:.7rem 0}
+.maint-card{border-radius:10px;padding:.75rem .9rem;border:1px solid;font-size:.81rem}
+/* Elicitation difficulty */
+.diff-item{background:var(--bg3);border-radius:8px;padding:.65rem .85rem;font-size:.82rem;border-right:3px solid var(--border2);margin-bottom:.55rem}
+@media(max-width:768px){.nav-links{display:none}.topics-grid{grid-template-columns:1fr}.comp-grid{grid-template-columns:1fr}.traps-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr}}
+@media print{nav,#back-top,#prog-bar{display:none}.topic-body,.essay-body{display:block!important}}
 </style>
 </head>
 <body>
-
 <div id="prog-bar"></div>
-<div id="notify"><i class="fa-solid fa-check me-1"></i> تم الحفظ!</div>
-
+<div id="notify"><i class="fa-solid fa-check"></i> تم الحفظ!</div>
 <nav id="navbar">
   <div class="nav-inner">
-    <div class="nav-logo"><i class="fa-solid fa-code me-1"></i> SE Rescue 2026</div>
+    <div class="nav-logo"><i class="fa-solid fa-code"></i> SE Rescue 2026</div>
     <ul class="nav-links">
       <li><a href="#hero"><i class="fa-solid fa-house"></i> البداية</a></li>
       <li><a href="#roadmap"><i class="fa-solid fa-map"></i> الصورة الكبيرة</a></li>
@@ -352,19 +234,18 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
   </div>
 </nav>
 
-<!-- ======= HERO ======= -->
+<!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-mesh"></div>
-  <div class="hero-grid"></div>
+  <div class="hero-mesh"></div><div class="hero-grid"></div>
   <div style="position:relative;z-index:1;width:100%;max-width:720px;margin:0 auto">
     <div class="badge"><i class="fa-solid fa-fire blink" style="color:var(--orange)"></i> امتحان قريب؟ ده هيلم الدنيا كلها</div>
     <h1>
       <div class="grad-blue">Software Engineering</div>
       <div class="grad-purple">Final Rescue 2026</div>
     </h1>
-    <p class="hero-sub">محدّث بالكامل من المحاضرة 3 لـ 6 — Class Diagrams، Package Diagrams، Sequence Diagrams، وكل حاجة قبلهم</p>
+    <p class="hero-sub">محدّث بالكامل من المحاضرة 2 لـ 6 — كل المحاضرات + أسئلة جديدة</p>
     <div class="hero-note">
-      <i class="fa-solid fa-sparkles"></i> <strong>جديد في هذه النسخة:</strong> Lecture 6 — Class Diagrams (Relationships, Visibility, Multiplicity)، Package Diagrams، Sequence Diagrams (Lifelines, Messages, Combined Fragments) + أسئلة T/F و MCQ جديدة
+      <i class="fa-solid fa-sparkles"></i> <strong>جديد في هذه النسخة:</strong> SW Process Phases (7 مراحل)، Spec/Design/Implementation/Maintenance/Retirement، SW-CMM (5 مستويات)، Difficulties of Elicitation (5 أنواع)، RTM Benefits، Elicitation Steps بالتفصيل + L6: Class Diagrams، Package Diagrams، Sequence Diagrams + أسئلة T/F و MCQ جديدة
     </div>
     <div class="hero-btns">
       <a href="#topics" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> ابدأ المذاكرة</a>
@@ -380,65 +261,49 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
   </div>
 </section>
 
-<!-- ======= PROGRESS ======= -->
+<!-- PROGRESS -->
 <div class="section" id="progress-section">
   <div class="prog-card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.65rem">
       <span style="font-weight:700;display:flex;align-items:center;gap:.4rem"><i class="fa-solid fa-chart-line" style="color:var(--blue2)"></i> تقدمك في المذاكرة</span>
-      <span id="progress-text" style="color:var(--blue2);font-weight:700;font-size:.85rem">0 / 10 موضوع</span>
+      <span id="progress-text" style="color:var(--blue2);font-weight:700;font-size:.85rem">0 / 12 موضوع</span>
     </div>
     <div class="prog-bar-wrap"><div class="prog-fill" id="progress-fill" style="width:0%"></div></div>
     <div class="topic-checks" id="topic-checks">
       <button class="topic-check" onclick="toggleTopic(0)">Intro to SE</button>
-      <button class="topic-check" onclick="toggleTopic(1)">Software Process</button>
-      <button class="topic-check" onclick="toggleTopic(2)">Requirements Pt.1</button>
-      <button class="topic-check" onclick="toggleTopic(3)">SMART & MoSCoW</button>
-      <button class="topic-check" onclick="toggleTopic(4)">SRS & V&V</button>
-      <button class="topic-check" onclick="toggleTopic(5)">UML Use Case</button>
-      <button class="topic-check" onclick="toggleTopic(6)">Activity Diagrams</button>
-      <button class="topic-check" onclick="toggleTopic(7)">State Machine</button>
-      <button class="topic-check" onclick="toggleTopic(8)">Class & Package Diagrams</button>
-      <button class="topic-check" onclick="toggleTopic(9)">Sequence Diagrams</button>
+      <button class="topic-check" onclick="toggleTopic(1)">SW Process Phases</button>
+      <button class="topic-check" onclick="toggleTopic(2)">CMM</button>
+      <button class="topic-check" onclick="toggleTopic(3)">Requirements Pt.1</button>
+      <button class="topic-check" onclick="toggleTopic(4)">Elicitation Process</button>
+      <button class="topic-check" onclick="toggleTopic(5)">SMART & MoSCoW</button>
+      <button class="topic-check" onclick="toggleTopic(6)">SRS & V&V & RTM</button>
+      <button class="topic-check" onclick="toggleTopic(7)">UML Use Case</button>
+      <button class="topic-check" onclick="toggleTopic(8)">Activity Diagrams</button>
+      <button class="topic-check" onclick="toggleTopic(9)">State Machine</button>
+      <button class="topic-check" onclick="toggleTopic(10)">Class & Package Diagrams</button>
+      <button class="topic-check" onclick="toggleTopic(11)">Sequence Diagrams</button>
     </div>
-    <button onclick="clearProgress()" style="margin-top:.6rem;padding:.25rem .65rem;border-radius:6px;background:var(--card2);border:1px solid var(--border);color:var(--text3);cursor:pointer;font-family:'Cairo',sans-serif;font-size:.73rem"><i class="fa-solid fa-trash me-1"></i> مسح التقدم</button>
+    <button onclick="clearProgress()" style="margin-top:.6rem;padding:.25rem .65rem;border-radius:6px;background:var(--card2);border:1px solid var(--border);color:var(--text3);cursor:pointer;font-family:'Cairo',sans-serif;font-size:.73rem"><i class="fa-solid fa-trash"></i> مسح التقدم</button>
   </div>
 </div>
 
-<!-- ======= ROADMAP ======= -->
+<!-- ROADMAP -->
 <div class="section reveal" id="roadmap">
   <h2 class="sec-title"><i class="fa-solid fa-map" style="color:var(--blue2)"></i> <span class="hi">الصورة الكبيرة</span></h2>
   <p class="sec-sub">كيف المواضيع ترتبط ببعض؟ فاهم الصورة دي = فاهم نص المادة</p>
   <div class="rm-wrap">
     <div class="roadmap">
-      <div class="rm-item">
-        <div class="rm-circle" style="background:rgba(59,130,246,.1);border-color:var(--blue);color:var(--blue2)">Intro<br>SE</div>
-        <div class="rm-label">ليه SE موجودة؟</div>
-      </div>
+      <div class="rm-item"><div class="rm-circle" style="background:rgba(59,130,246,.1);border-color:var(--blue);color:var(--blue2)">Intro<br>SE</div><div class="rm-label">ليه SE موجودة؟</div></div>
       <div class="rm-arrow"></div>
-      <div class="rm-item">
-        <div class="rm-circle" style="background:rgba(16,185,129,.1);border-color:var(--green);color:var(--green2)">SW<br>Process</div>
-        <div class="rm-label">ازاي بنشتغل؟</div>
-      </div>
+      <div class="rm-item"><div class="rm-circle" style="background:rgba(16,185,129,.1);border-color:var(--green);color:var(--green2)">SW<br>Process</div><div class="rm-label">7 مراحل</div></div>
       <div class="rm-arrow"></div>
-      <div class="rm-item">
-        <div class="rm-circle" style="background:rgba(245,158,11,.1);border-color:var(--yellow);color:var(--yellow2)">Require-<br>ments</div>
-        <div class="rm-label">إيه اللي العميل عايزه؟</div>
-      </div>
+      <div class="rm-item"><div class="rm-circle" style="background:rgba(245,158,11,.1);border-color:var(--yellow);color:var(--yellow2)">Require-<br>ments</div><div class="rm-label">إيه اللي العميل عايزه؟</div></div>
       <div class="rm-arrow"></div>
-      <div class="rm-item">
-        <div class="rm-circle" style="background:rgba(139,92,246,.1);border-color:var(--purple);color:var(--purple2)">SRS &<br>Sign-off</div>
-        <div class="rm-label">وثيقة المتطلبات</div>
-      </div>
+      <div class="rm-item"><div class="rm-circle" style="background:rgba(139,92,246,.1);border-color:var(--purple);color:var(--purple2)">SRS &<br>Sign-off</div><div class="rm-label">وثيقة المتطلبات</div></div>
       <div class="rm-arrow"></div>
-      <div class="rm-item">
-        <div class="rm-circle" style="background:rgba(6,182,212,.1);border-color:var(--teal);color:var(--teal2)">UML<br>Diagrams</div>
-        <div class="rm-label">رسم النظام</div>
-      </div>
+      <div class="rm-item"><div class="rm-circle" style="background:rgba(6,182,212,.1);border-color:var(--teal);color:var(--teal2)">UML<br>Diagrams</div><div class="rm-label">رسم النظام</div></div>
       <div class="rm-arrow"></div>
-      <div class="rm-item">
-        <div class="rm-circle" style="background:rgba(236,72,153,.1);border-color:var(--pink);color:var(--pink)">Design<br>& Code</div>
-        <div class="rm-label">التنفيذ</div>
-      </div>
+      <div class="rm-item"><div class="rm-circle" style="background:rgba(236,72,153,.1);border-color:var(--pink);color:var(--pink)">Design<br>& Code</div><div class="rm-label">التنفيذ</div></div>
     </div>
     <div style="margin-top:1.1rem;font-size:.8rem;color:var(--text2);text-align:center"><i class="fa-solid fa-rotate"></i> <strong>Testing + Documentation</strong> بتحصل في كل المراحل — مش بس في النهاية!</div>
     <div style="margin-top:.7rem;display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center">
@@ -446,13 +311,14 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       <span class="chip chip-blue">SMART → MoSCoW → SRS → Sign-off</span>
       <span class="chip chip-green">Verification ≠ Validation</span>
       <span class="chip chip-teal">Use Case → Activity → State → Class → Sequence</span>
+      <span class="chip chip-red">CMM: 1 Initial → 5 Optimizing</span>
     </div>
   </div>
 </div>
 
 <hr class="divider">
 
-<!-- ======= TOPICS ======= -->
+<!-- TOPICS -->
 <div class="section" id="topics">
   <h2 class="sec-title"><i class="fa-solid fa-book-open" style="color:var(--blue2)"></i> <span class="hi">المحاضرات</span></h2>
   <p class="sec-sub">كل محاضرة في كارت — اضغط عليه يتفتح</p>
@@ -468,42 +334,175 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
         <i class="fa-solid fa-chevron-down chevron"></i>
       </div>
       <div class="topic-body">
-        <div class="def-box"><strong>Software Engineering</strong> = تطبيق مبادئ هندسية منهجية لتطوير برمجيات موثوقة بكفاءة — مش بس كتابة كود!</div>
-        <div class="exam-box"><div class="lbl"><i class="fa-solid fa-bullseye"></i> ليه SE موجودة؟</div>بسبب الـ <strong>Software Crisis</strong> — البرامج كانت بتتأخر وبتتجاوز الميزانية وملانة bugs.</div>
+        <div class="def-box"><strong>Software Engineering</strong> = تطبيق مبادئ هندسية منهجية (systematic, well-defined scientific principles, techniques, and procedures) لتطوير برمجيات موثوقة بكفاءة.</div>
+        <div class="exam-box"><div class="lbl"><i class="fa-solid fa-bullseye"></i> ليه SE موجودة؟</div>بسبب الـ <strong>Software Crisis</strong> — البرامج كانت بتتأخر (Late)، تتجاوز الميزانية (Over budget)، وملانة (With residual faults). أول ما اتقال المصطلح في مؤتمرات NATO سنة 1968 و1969.</div>
+        <div class="def-box"><strong>Software Product</strong> يشمل 3 أشياء:<br>
+          (1) <strong>Programs</strong> — الكود اللي بيتنفذ<br>
+          (2) <strong>Data structures</strong> — البيانات المصاحبة<br>
+          (3) <strong>Documents</strong> — وثائق التشغيل والاستخدام
+        </div>
         <p style="font-weight:700;margin:.7rem 0 .45rem;font-size:.88rem"><i class="fa-solid fa-circle-exclamation" style="color:var(--red2)"></i> Error vs Fault vs Failure</p>
         <ul class="clist">
-          <li><strong>Error</strong>: غلطة بشرية من المطور</li>
-          <li><strong>Fault / Bug</strong>: الكود المعيب الناتج من الغلطة</li>
-          <li><strong>Failure</strong>: لما البرنامج يشتغل ويطلع نتيجة غلط للمستخدم</li>
+          <li><strong>Error (Mistake)</strong>: غلطة بشرية من المطور — a human action that produces an incorrect result</li>
+          <li><strong>Fault / Bug / Defect</strong>: الكود المعيب الناتج من الغلطة — a manifestation of an error in software</li>
+          <li><strong>Failure</strong>: لما البرنامج يشتغل ويطلع نتيجة غلط للمستخدم — a deviation of the software from its expected delivery or service</li>
         </ul>
         <div class="mem-box"><div class="lbl"><i class="fa-solid fa-brain"></i> ترتيب زمني</div>Error → Fault → Failure</div>
-        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ شائع</div>"Software = Code فقط" — غلط! Software يشمل الـ documentation والـ data وكل المواد المرتبطة.</div>
+        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ شائع</div>"Software = Code فقط" — غلط! Software = Programs + Data + Documents.</div>
       </div>
     </div>
 
-    <!-- L2 -->
+    <!-- L2 Software Process Phases -->
     <div class="topic-card" id="card-1">
       <div class="topic-hdr" onclick="toggleCard(1)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(16,185,129,.12)"><i class="fa-solid fa-gears" style="color:var(--green2)"></i></div>
-          <div><div class="topic-num">Lecture 2</div><div class="topic-title">Software Process</div></div>
+          <div><div class="topic-num">Lecture 2 ⭐</div><div class="topic-title">Software Process — 7 Phases</div></div>
         </div>
         <i class="fa-solid fa-chevron-down chevron"></i>
       </div>
       <div class="topic-body">
-        <div class="def-box"><strong>Software Process</strong> = مجموعة أنشطة وخطوات بتُتبع لإنتاج البرمجيات</div>
-        <ul class="clist">
-          <li><strong>Methods</strong>: المنهجية والطريقة (كيف نشتغل)</li>
-          <li><strong>Tools</strong>: الأدوات (IDE, UML tools)</li>
-          <li><strong>Process</strong>: الإطار اللي بينظم الاثنين</li>
-        </ul>
-        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ الامتحان</div>Testing و Documentation مش مرحلة واحدة في الآخر — بيحصلوا في <strong>كل المراحل</strong>!</div>
+        <div class="def-box"><strong>Software Process</strong> = a roadmap that helps you create a high quality product, in a timely manner.<br>يتكون من: <strong>Methods</strong> (HOW TO) + <strong>Tools</strong> (automated support) + <strong>Process</strong> (الـ glue اللي بيربطهم)</div>
+
+        <p style="font-weight:700;font-size:.92rem;margin:.7rem 0 .5rem;color:var(--yellow2)"><i class="fa-solid fa-list-ol"></i> الـ 7 مراحل</p>
+        
+        <!-- Phase 1 -->
+        <div style="background:var(--bg3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;border-right:3px solid var(--blue2)">
+          <div style="font-weight:700;color:var(--blue2);font-size:.86rem;margin-bottom:.35rem">Phase 1 — Requirements Phase (WHAT?)</div>
+          <ul class="clist" style="margin-bottom:0">
+            <li>(1) <strong>Requirements Gathering</strong>: تفهم العميل عايز إيه</li>
+            <li>(2) <strong>Requirements Capturing</strong>: Data، Functionality، Quality Attributes</li>
+            <li>(3) <strong>Validate Requirements</strong>: عن طريق Rapid Prototyping</li>
+            <li>(4) <strong>Deliverable</strong>: Requirements document — checked by client, users, dev team</li>
+          </ul>
+        </div>
+
+        <!-- Phase 2 -->
+        <div style="background:var(--bg3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;border-right:3px solid var(--green2)">
+          <div style="font-weight:700;color:var(--green2);font-size:.86rem;margin-bottom:.35rem">Phase 2 — Specification Phase (WHAT? — precise)</div>
+          <p style="font-size:.82rem;color:var(--text2);margin-bottom:.35rem">الـ Specifications document: بتوصف exactly functionality، constraints، inputs، outputs</p>
+          <p style="font-size:.82rem;color:var(--text2);margin-bottom:.3rem"><strong style="color:var(--red2)">لازم مش تكون:</strong></p>
+          <ul class="clist" style="margin-bottom:.3rem">
+            <li><strong>Ambiguous</strong>: open to more than one interpretation</li>
+            <li><strong>Incomplete</strong>: missing necessary parts</li>
+            <li><strong>Contradictory</strong>: mutually opposed or inconsistent</li>
+          </ul>
+          <div style="background:rgba(245,158,11,.05);border-radius:6px;padding:.45rem .65rem;font-size:.78rem;color:var(--text2)">
+            <strong style="color:var(--yellow2)">SQA role:</strong> Check for contradictions/ambiguities/incompleteness، ensure feasibility، trace every spec back to requirements، review by SQA + specification team + client
+          </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div style="background:var(--bg3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;border-right:3px solid var(--purple2)">
+          <div style="font-weight:700;color:var(--purple2);font-size:.86rem;margin-bottom:.35rem">Phase 3 — Design Phase (HOW?)</div>
+          <ul class="clist" style="margin-bottom:.3rem">
+            <li><strong>High-level Design</strong>: graphical structure، module interfaces، algorithms overview، non-functional constraints</li>
+            <li><strong>Detailed Design (Low-level)</strong>: precise module responsibilities، pre/post conditions، invariants، internal data structures</li>
+          </ul>
+          <div style="background:rgba(139,92,246,.05);border-radius:6px;padding:.45rem .65rem;font-size:.78rem;color:var(--text2)">
+            <strong style="color:var(--purple2)">SQA role:</strong> Check for logic faults، interface faults، lack of exception handling، nonconformance to spec. Documentation: architecture + detailed design
+          </div>
+        </div>
+
+        <!-- Phase 4 -->
+        <div style="background:var(--bg3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;border-right:3px solid var(--teal2)">
+          <div style="font-weight:700;color:var(--teal2);font-size:.86rem;margin-bottom:.35rem">Phase 4 — Implementation Phase</div>
+          <ul class="clist" style="margin-bottom:.3rem">
+            <li>Implement the detailed design in code</li>
+            <li><strong>Testing:</strong> Code review + Running test cases</li>
+            <li><strong>Desk checking</strong>: informal testing by the programmer</li>
+            <li>Testing by SQA group</li>
+          </ul>
+          <div style="background:rgba(6,182,212,.05);border-radius:6px;padding:.45rem .65rem;font-size:.78rem;color:var(--text2)">
+            <strong style="color:var(--teal2)">Documentation:</strong> Source code with comments + test cases
+          </div>
+        </div>
+
+        <!-- Phase 5 -->
+        <div style="background:var(--bg3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;border-right:3px solid var(--orange2)">
+          <div style="font-weight:700;color:var(--orange2);font-size:.86rem;margin-bottom:.35rem">Phase 5 — Integration Phase (in parallel with 4)</div>
+          <ul class="clist" style="margin-bottom:.3rem">
+            <li>Integrate modules — in <strong>parallel</strong> with implementation</li>
+            <li><strong>Correctness</strong>: free from error | <strong>Robustness</strong>: works under invalid inputs/stressful conditions</li>
+            <li><strong>Acceptance testing</strong> by client: accept or reject the delivered software</li>
+            <li>Selected users test on site → <strong>Alpha version</strong></li>
+            <li>Corrected alpha → <strong>Beta version</strong></li>
+          </ul>
+          <div style="background:rgba(249,115,22,.05);border-radius:6px;padding:.45rem .65rem;font-size:.78rem;color:var(--text2)">
+            <strong style="color:var(--orange2)">Documentation:</strong> commented source code، test cases، User/Operator/Database manuals
+          </div>
+        </div>
+
+        <!-- Phase 6 -->
+        <div style="background:var(--bg3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;border-right:3px solid var(--pink)">
+          <div style="font-weight:700;color:var(--pink);font-size:.86rem;margin-bottom:.35rem">Phase 6 — Maintenance Phase (67% of total cost!)</div>
+          <div class="maint-grid" style="margin:.5rem 0">
+            <div class="maint-card" style="background:rgba(59,130,246,.07);border-color:rgba(59,130,246,.22)"><div style="font-weight:800;color:var(--blue2);margin-bottom:.3rem">Adaptive</div><div style="color:var(--text2);font-size:.78rem">Modifying to cope with changes in environment (OS, DBMS)</div></div>
+            <div class="maint-card" style="background:rgba(16,185,129,.07);border-color:rgba(16,185,129,.22)"><div style="font-weight:800;color:var(--green2);margin-bottom:.3rem">Perfective</div><div style="color:var(--text2);font-size:.78rem">Implementing new or changed user requirements (functional enhancements)</div></div>
+            <div class="maint-card" style="background:rgba(239,68,68,.07);border-color:rgba(239,68,68,.22)"><div style="font-weight:800;color:var(--red2);margin-bottom:.3rem">Corrective</div><div style="color:var(--text2);font-size:.78rem">Diagnosing and fixing errors found by users</div></div>
+            <div class="maint-card" style="background:rgba(245,158,11,.07);border-color:rgba(245,158,11,.22)"><div style="font-weight:800;color:var(--yellow2);margin-bottom:.3rem">Preventive</div><div style="color:var(--text2);font-size:.78rem">Increasing maintainability/reliability to prevent future problems</div></div>
+          </div>
+          <div class="exam-box" style="margin-bottom:0"><div class="lbl"><i class="fa-solid fa-bullseye"></i> Regression Testing</div>بعد أي تعديل في الـ Maintenance، لازم تختبر المنتج على الـ <strong>previous test cases</strong> عشان تتأكد إن باقي الـ functionality مش اتأثر.</div>
+        </div>
+
+        <!-- Phase 7 -->
+        <div style="background:var(--bg3);border-radius:10px;padding:.85rem 1rem;margin-bottom:.6rem;border-right:3px solid var(--text3)">
+          <div style="font-weight:700;color:var(--text2);font-size:.86rem;margin-bottom:.35rem">Phase 7 — Retirement</div>
+          <p style="font-size:.82rem;color:var(--text2)">Software becomes un-maintainable when:</p>
+          <ul class="clist" style="margin-bottom:.3rem">
+            <li>A drastic change in design is proposed</li>
+            <li>Must be implemented on totally new hardware/OS</li>
+            <li>Documentation is missing or inaccurate</li>
+          </ul>
+          <p style="font-size:.8rem;color:var(--text3)">→ It may be cheaper to rewrite from scratch than to modify it</p>
+        </div>
+
+        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> أهم فخ في الـ Process</div>Testing و Documentation <strong>مش مرحلة في الآخر</strong> — بيحصلوا في <strong>كل المراحل</strong>. والـ Maintenance = 67% من إجمالي تكلفة المشروع!</div>
       </div>
     </div>
 
-    <!-- L3 -->
+    <!-- L2 CMM -->
     <div class="topic-card" id="card-2">
       <div class="topic-hdr" onclick="toggleCard(2)">
+        <div class="topic-hdr-l">
+          <div class="topic-icon" style="background:rgba(245,158,11,.12)"><i class="fa-solid fa-chart-simple" style="color:var(--yellow2)"></i></div>
+          <div><div class="topic-num">Lecture 2 — Part 2</div><div class="topic-title">SW-CMM — 5 Maturity Levels</div></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron"></i>
+      </div>
+      <div class="topic-body">
+        <div class="def-box"><strong>SW-CMM</strong> (Capability Maturity Model) = نموذج من الـ SEI / Carnegie Mellon بيوصف كيف تحسين الـ Software Process. المنظمة بتتقدم stepwise من level 1 لـ 5.</div>
+        <div class="cmm-grid">
+          <div class="cmm-card" style="background:rgba(239,68,68,.07);border-color:rgba(239,68,68,.22)">
+            <div style="font-weight:800;color:var(--red2);font-size:.9rem;margin-bottom:.3rem">Level 1 — Initial</div>
+            <div style="color:var(--text2);font-size:.78rem">Ad hoc (occasionally chaotic). Depends totally on current staff. Entire process unpredictable. Management = crisis response.<br><span style="color:var(--text3)">← Most organizations are here!</span></div>
+          </div>
+          <div class="cmm-card" style="background:rgba(245,158,11,.07);border-color:rgba(245,158,11,.22)">
+            <div style="font-weight:800;color:var(--yellow2);font-size:.9rem;margin-bottom:.3rem">Level 2 — Repeatable</div>
+            <div style="color:var(--text2);font-size:.78rem">Basic project management to track cost، schedule، functionality. Planning based on similar previous projects. Measurements for detecting problems.</div>
+          </div>
+          <div class="cmm-card" style="background:rgba(59,130,246,.07);border-color:rgba(59,130,246,.22)">
+            <div style="font-weight:800;color:var(--blue2);font-size:.9rem;margin-bottom:.3rem">Level 3 — Defined</div>
+            <div style="color:var(--text2);font-size:.78rem">Process fully documented & standardized. Reviews for quality improvement. CASE environments applicable.</div>
+          </div>
+          <div class="cmm-card" style="background:rgba(16,185,129,.07);border-color:rgba(16,185,129,.22)">
+            <div style="font-weight:800;color:var(--green2);font-size:.9rem;margin-bottom:.3rem">Level 4 — Managed</div>
+            <div style="color:var(--text2);font-size:.78rem">Detailed measures of product & process quality collected. Statistical quality controls in place. Quality & productivity continually monitored.</div>
+          </div>
+          <div class="cmm-card" style="background:rgba(139,92,246,.07);border-color:rgba(139,92,246,.22)">
+            <div style="font-weight:800;color:var(--purple2);font-size:.9rem;margin-bottom:.3rem">Level 5 — Optimizing</div>
+            <div style="color:var(--text2);font-size:.78rem">Continuous process improvement. Knowledge from each project used in future. Statistical quality & process controls.</div>
+          </div>
+        </div>
+        <div class="mem-box"><div class="lbl"><i class="fa-solid fa-brain"></i> ترتيب المستويات</div>Initial → Repeatable → Defined → Managed → Optimizing</div>
+        <div class="exam-box"><div class="lbl"><i class="fa-solid fa-bullseye"></i> من المحاضرة</div>يستغرق 3-5 سنين للانتقال من Level 1 لـ 2، و1.5-3 سنين من 2 لـ 3. معظم المنظمات لسه في Level 1.<br>هناك أيضاً: <strong>ISO 9000</strong> (مطلوب للتعامل مع الـ EU) و <strong>ISO/IEC 15504 (SPICE)</strong></div>
+        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ</div>CASE environments بتكون applicable في Level 3 فما فوق — مش في Level 1 أو 2!</div>
+      </div>
+    </div>
+
+    <!-- L3 Requirements -->
+    <div class="topic-card" id="card-3">
+      <div class="topic-hdr" onclick="toggleCard(3)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(245,158,11,.12)"><i class="fa-solid fa-clipboard-list" style="color:var(--yellow2)"></i></div>
           <div><div class="topic-num">Lecture 3 ⭐</div><div class="topic-title">Requirements Engineering — Part 1</div></div>
@@ -511,27 +510,96 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
         <i class="fa-solid fa-chevron-down chevron"></i>
       </div>
       <div class="topic-body">
-        <div class="def-box"><strong>Requirements Definition</strong> = وصف مبسط بلغة عادية للعملاء</div>
-        <div class="def-box"><strong>Requirements Specification (SRS)</strong> = وثيقة منظمة ودقيقة للمطورين</div>
+        <div class="def-box"><strong>Requirements Definition</strong> = وصف مبسط بلغة عادية للعملاء — understandable by customers without specialized notations</div>
+        <div class="def-box"><strong>Requirements Specification (SRS)</strong> = وثيقة منظمة ودقيقة للمطورين — structured document setting out system services in detail; must be precise</div>
         <p style="font-weight:700;font-size:.9rem;margin:.8rem 0 .45rem"><i class="fa-solid fa-circle-check" style="color:var(--green2)"></i> Functional Requirements (WHAT)</p>
-        <div class="def-box">مميزات أو وظائف المنتج — <strong>لا تحتوي HOW</strong></div>
+        <div class="def-box">Product features or functions that developers must implement to enable users to accomplish their tasks.<br><strong>لا تحتوي HOW</strong> — design/implementation details مش من هنا.</div>
+        <div class="exam-box"><div class="lbl"><i class="fa-solid fa-bullseye"></i> Functional Requirements should include:</div>
+          Details of operations on every screen، data handling logic، system reports/outputs، workflows، who can create/modify/delete data، regulatory compliance
+        </div>
         <p style="font-weight:700;font-size:.9rem;margin:.8rem 0 .45rem"><i class="fa-solid fa-gauge" style="color:var(--yellow2)"></i> Non-Functional Requirements (HOW WELL)</p>
-        <div class="def-box">بتوصف <strong>كيف يؤدي النظام وظيفته</strong>. تُعرف بـ <strong>quality attributes</strong>. لازم تكون <strong>قابلة للقياس</strong>.</div>
-        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> القاعدة الذهبية</div>❌ "النظام لازم يكون سريع"<br>✅ "النظام يعالج الطلب خلال <strong>5 ثواني</strong>"</div>
-        <p style="font-weight:700;font-size:.9rem;margin:.8rem 0 .45rem"><i class="fa-solid fa-magnifying-glass" style="color:var(--purple2)"></i> 5 تقنيات Elicitation</p>
+        <div class="def-box">بتوصف <strong>كيف يؤدي النظام وظيفته</strong>. تُعرف بـ <strong>quality attributes</strong>. لازم تكون <strong>قابلة للقياس</strong>. Failing to meet them → system fails to satisfy user needs.</div>
+        <div class="info-box"><div class="lbl"><i class="fa-solid fa-list"></i> أنواع NFR</div>Performance، Scalability، Portability، Compatibility، Reliability، Availability، Security، Usability</div>
+        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> القاعدة الذهبية</div>❌ "النظام لازم يكون سريع"<br>✅ "The system must process cash withdrawal within <strong>5 seconds</strong> of bank approval."</div>
+        <p style="font-weight:700;font-size:.9rem;margin:.8rem 0 .45rem"><i class="fa-solid fa-magnifying-glass" style="color:var(--purple2)"></i> Requirements Engineering Process — 3 مراحل رئيسية</p>
+        <ul class="clist">
+          <li><strong>(1) Requirements Elicitation</strong>: discover, reveal, articulate, understand requirements</li>
+          <li><strong>(2) Requirements Analysis & Negotiation</strong>: examine for conflicts, inconsistencies, combine related, identify missing</li>
+          <li><strong>(3) Requirements Specification</strong>: record requirements in natural language / formal / graphical representations</li>
+        </ul>
+        <p style="font-weight:700;font-size:.9rem;margin:.8rem 0 .45rem"><i class="fa-solid fa-wrench" style="color:var(--orange2)"></i> Top 5 Elicitation Techniques</p>
         <div style="display:flex;flex-direction:column;gap:.42rem;margin-bottom:.85rem">
-          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--blue2)"><strong style="color:var(--blue2)">#1 Prototyping</strong> — بناء نموذج مبكر للتحقق من التصميم</div>
-          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--green2)"><strong style="color:var(--green2)">#2 Workshops</strong> — حدث مكثف مع المعنيين. خطر: شخصية مسيطرة</div>
-          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--yellow2)"><strong style="color:var(--yellow2)">#3 Interviews</strong> — فردي. فهم الاحتياجات الحقيقية</div>
-          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--purple2)"><strong style="color:var(--purple2)">#4 Surveys / Questionnaires</strong> — Fixed أو Free format</div>
-          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--orange2)"><strong style="color:var(--orange2)">#5 Observation</strong> — مراقبة المستخدمين. غني لكن يستهلك وقت</div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--blue2)"><strong style="color:var(--blue2)">#1 Prototyping</strong> — بناء نموذج مبكر. Benefit: verify design while still time to change it</div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--green2)"><strong style="color:var(--green2)">#2 Workshops</strong> — focused event مع key stakeholders. Benefit: basic requirements done quickly. خطر: شخصية مسيطرة</div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--yellow2)"><strong style="color:var(--yellow2)">#3 Interviews</strong> — one-on-one. Benefit: understand real (not just perceived) need</div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--purple2)"><strong style="color:var(--purple2)">#4 Surveys / Questionnaires</strong> — Fixed Format (predefined answers) أو Free Format (open response)</div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.6rem .85rem;font-size:.81rem;border-right:3px solid var(--orange2)"><strong style="color:var(--orange2)">#5 Observation</strong> — مراقبة المستخدمين في عملهم. غني لكن users tend to adjust behavior when watched</div>
         </div>
       </div>
     </div>
 
-    <!-- L4 P1 -->
-    <div class="topic-card" id="card-3">
-      <div class="topic-hdr" onclick="toggleCard(3)">
+    <!-- L3 Elicitation Process & Difficulties -->
+    <div class="topic-card" id="card-4">
+      <div class="topic-hdr" onclick="toggleCard(4)">
+        <div class="topic-hdr-l">
+          <div class="topic-icon" style="background:rgba(6,182,212,.12)"><i class="fa-solid fa-person-digging" style="color:var(--teal2)"></i></div>
+          <div><div class="topic-num">Lecture 3 — Part 2 🆕</div><div class="topic-title">Elicitation Process & Difficulties</div></div>
+        </div>
+        <i class="fa-solid fa-chevron-down chevron"></i>
+      </div>
+      <div class="topic-body">
+        <p style="font-weight:700;font-size:.92rem;margin:0 0 .5rem"><i class="fa-solid fa-shoe-prints" style="color:var(--teal2)"></i> Elicitation Process — 4 Steps</p>
+        <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:.9rem">
+          <div style="background:var(--bg3);border-radius:8px;padding:.7rem .9rem;border-right:3px solid var(--teal2)">
+            <div style="font-weight:700;color:var(--teal2);font-size:.84rem;margin-bottom:.3rem">Step 1 — Choose the optimal elicitation approach</div>
+            <div style="font-size:.8rem;color:var(--text2)">Based on: organization makeup، political climate، project nature، personal strengths/preferences. No single technique works for all projects!</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.7rem .9rem;border-right:3px solid var(--blue2)">
+            <div style="font-weight:700;color:var(--blue2);font-size:.84rem;margin-bottom:.3rem">Step 2 — Elicitation Preparation</div>
+            <div style="font-size:.8rem;color:var(--text2)">You should establish: objective for activities، specific participants، resources/supporting materials، predetermined questions + how to record answers، agenda with start/end times</div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.7rem .9rem;border-right:3px solid var(--purple2)">
+            <div style="font-weight:700;color:var(--purple2);font-size:.84rem;margin-bottom:.3rem">Step 3 — Conduct the Elicitation (4 stages)</div>
+            <div style="font-size:.8rem;color:var(--text2)">
+              <strong>1. Introduction:</strong> set stage، establish tone، discuss activities/timing<br>
+              <strong>2. Body:</strong> execute chosen technique (interviews → questions، workshops → group activity)<br>
+              <strong>3. Close:</strong> closing questions ("any info we didn't cover?")، ask if open to follow-up<br>
+              <strong>4. Follow-up:</strong> clarify، verify accuracy of recorded info
+            </div>
+          </div>
+          <div style="background:var(--bg3);border-radius:8px;padding:.7rem .9rem;border-right:3px solid var(--green2)">
+            <div style="font-weight:700;color:var(--green2);font-size:.84rem;margin-bottom:.3rem">Step 4 — Analyze Elicitation Results</div>
+            <div style="font-size:.8rem;color:var(--text2)">Reading notes → summarize → identify keywords/ideas. Tools: <strong>QVscribe، NVivo</strong></div>
+          </div>
+        </div>
+
+        <p style="font-weight:700;font-size:.92rem;margin:.85rem 0 .5rem"><i class="fa-solid fa-triangle-exclamation" style="color:var(--red2)"></i> Difficulties of Requirements Elicitation (5 أنواع)</p>
+        <div class="diff-item" style="border-color:var(--red)">
+          <strong style="color:var(--red2)">(1) Articulation Problems</strong><br>
+          <span style="font-size:.79rem;color:var(--text2)">Users: may not be aware of needs، unable/afraid to articulate them<br>Developers: may not really listen، tend to overrule users</span>
+        </div>
+        <div class="diff-item" style="border-color:var(--yellow)">
+          <strong style="color:var(--yellow2)">(2) Communication Barriers</strong><br>
+          <span style="font-size:.79rem;color:var(--text2)">Users and developers have different professional vocabularies</span>
+        </div>
+        <div class="diff-item" style="border-color:var(--purple)">
+          <strong style="color:var(--purple2)">(3) Knowledge & Cognitive Limitations</strong><br>
+          <span style="font-size:.79rem;color:var(--text2)">Elicitor must have adequate domain knowledge. People tend to state the problem in terms of the favored solution</span>
+        </div>
+        <div class="diff-item" style="border-color:var(--orange)">
+          <strong style="color:var(--orange2)">(4) Human Behavior Issues</strong><br>
+          <span style="font-size:.79rem;color:var(--text2)">Fear that software will necessitate changes in behavior، including potential loss of jobs</span>
+        </div>
+        <div class="diff-item" style="border-color:var(--teal)">
+          <strong style="color:var(--teal2)">(5) Technical Issues</strong><br>
+          <span style="font-size:.79rem;color:var(--text2)">Requirements change over time. Software/hardware technologies are changing rapidly</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- L4 P1 SMART & MoSCoW -->
+    <div class="topic-card" id="card-5">
+      <div class="topic-hdr" onclick="toggleCard(5)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(139,92,246,.12)"><i class="fa-solid fa-chart-bar" style="color:var(--purple2)"></i></div>
           <div><div class="topic-num">Lecture 4 — Part 1</div><div class="topic-title">SMART & MoSCoW</div></div>
@@ -541,49 +609,72 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       <div class="topic-body">
         <p style="font-weight:700;font-size:.92rem;margin:0 0 .5rem"><i class="fa-solid fa-bullseye" style="color:var(--blue2)"></i> SMART Criteria</p>
         <div class="smart-grid">
-          <div class="smart-card"><span class="smart-letter" style="color:var(--red2)">S</span><div><strong>Specific</strong><br><span style="color:var(--text3);font-size:.75rem">بلا غموض</span></div></div>
-          <div class="smart-card"><span class="smart-letter" style="color:var(--green2)">M</span><div><strong>Measurable</strong><br><span style="color:var(--text3);font-size:.75rem">فيه رقم</span></div></div>
-          <div class="smart-card"><span class="smart-letter" style="color:var(--purple2)">A</span><div><strong>Achievable</strong><br><span style="color:var(--text3);font-size:.75rem">ممكن تنفيذه</span></div></div>
-          <div class="smart-card"><span class="smart-letter" style="color:var(--yellow2)">R</span><div><strong>Relevant</strong><br><span style="color:var(--text3);font-size:.75rem">في حدود الموارد</span></div></div>
-          <div class="smart-card"><span class="smart-letter" style="color:var(--orange2)">T</span><div><strong>Time-oriented</strong><br><span style="color:var(--text3);font-size:.75rem">فيه deadline</span></div></div>
+          <div class="smart-card"><span class="smart-letter" style="color:var(--red2)">S</span><div><strong>Specific</strong><br><span style="color:var(--text3);font-size:.75rem">بلا غموض، consistent terminology</span></div></div>
+          <div class="smart-card"><span class="smart-letter" style="color:var(--green2)">M</span><div><strong>Measurable</strong><br><span style="color:var(--text3);font-size:.75rem">فيه رقم — especially for NFR</span></div></div>
+          <div class="smart-card"><span class="smart-letter" style="color:var(--purple2)">A</span><div><strong>Achievable</strong><br><span style="color:var(--text3);font-size:.75rem">ممكن تنفيذه في حدود المعرفة البشرية</span></div></div>
+          <div class="smart-card"><span class="smart-letter" style="color:var(--yellow2)">R</span><div><strong>Relevant</strong><br><span style="color:var(--text3);font-size:.75rem">realistic given the resources</span></div></div>
+          <div class="smart-card"><span class="smart-letter" style="color:var(--orange2)">T</span><div><strong>Time-oriented</strong><br><span style="color:var(--text3);font-size:.75rem">When will it be done? deadline + milestones</span></div></div>
+        </div>
+        <div class="ex-box"><div class="lbl"><i class="fa-solid fa-pen-ruler"></i> SMART Examples from lecture</div>
+          ❌ "The system shall manage project schedule." → <strong>Not Specific</strong> (Manage = Create/Update/Delete?)<br>
+          ❌ "The system shall have great usability." → <strong>Not Measurable</strong><br>
+          ❌ "100% reliable and 100% available" → <strong>Not Achievable</strong><br>
+          ❌ "Implement Oracle in 1 month" → <strong>Not Relevant</strong> (ERPs take 3+ months)
         </div>
         <p style="font-weight:700;font-size:.92rem;margin:.85rem 0 .5rem"><i class="fa-solid fa-sort-amount-down" style="color:var(--yellow2)"></i> MoSCoW</p>
         <div class="moscow-grid">
-          <div class="moscow-card" style="background:rgba(239,68,68,.07);border-color:rgba(239,68,68,.22)"><div style="font-weight:800;color:var(--red2);margin-bottom:.35rem">M — Must Have</div><div style="font-size:.8rem;color:var(--text2)">بدونه المشروع فاشل. أقصى 60%</div></div>
-          <div class="moscow-card" style="background:rgba(245,158,11,.07);border-color:rgba(245,158,11,.22)"><div style="font-weight:800;color:var(--yellow2);margin-bottom:.35rem">S — Should Have</div><div style="font-size:.8rem;color:var(--text2)">مهم لكن ليس ضروري. أقصى 80%</div></div>
-          <div class="moscow-card" style="background:rgba(59,130,246,.07);border-color:rgba(59,130,246,.22)"><div style="font-weight:800;color:var(--blue2);margin-bottom:.35rem">C — Could Have</div><div style="font-size:.8rem;color:var(--text2)">Nice to have لو في وقت</div></div>
-          <div class="moscow-card" style="background:rgba(107,114,128,.07);border-color:rgba(107,114,128,.22)"><div style="font-weight:800;color:#9ca3af;margin-bottom:.35rem">W — Won't Have</div><div style="font-size:.8rem;color:var(--text2)">مستقبل — next release</div></div>
+          <div class="moscow-card" style="background:rgba(239,68,68,.07);border-color:rgba(239,68,68,.22)"><div style="font-weight:800;color:var(--red2);margin-bottom:.35rem">M — Must Have</div><div style="font-size:.8rem;color:var(--text2)">Necessity — without it the project FAILS. No alternative. أقصى 60%<br><em style="color:var(--text3)">e.g. HR system must store employee leave history</em></div></div>
+          <div class="moscow-card" style="background:rgba(245,158,11,.07);border-color:rgba(245,158,11,.22)"><div style="font-weight:800;color:var(--yellow2);margin-bottom:.35rem">S — Should Have</div><div style="font-size:.8rem;color:var(--text2)">High priority but NOT essential. Project still viable without it. أقصى 80%<br><em style="color:var(--text3)">e.g. should allow printing leave letters</em></div></div>
+          <div class="moscow-card" style="background:rgba(59,130,246,.07);border-color:rgba(59,130,246,.22)"><div style="font-weight:800;color:var(--blue2);margin-bottom:.35rem">C — Could Have</div><div style="font-size:.8rem;color:var(--text2)">Nice to have — only if more than enough time. أقصى 100%<br><em style="color:var(--text3)">e.g. could send notifications on pending leave</em></div></div>
+          <div class="moscow-card" style="background:rgba(107,114,128,.07);border-color:rgba(107,114,128,.22)"><div style="font-weight:800;color:#9ca3af;margin-bottom:.35rem">W — Won't Have</div><div style="font-size:.8rem;color:var(--text2)">Future wishes — next release only<br><em style="color:var(--text3)">e.g. won't support remote access — may in next release</em></div></div>
         </div>
         <div class="mem-box"><div class="lbl"><i class="fa-solid fa-brain"></i> نسب الجهد</div>Must = أقصى 60% → Must+Should = أقصى 80% → +Could = أقصى 100%</div>
       </div>
     </div>
 
-    <!-- L4 P2 -->
-    <div class="topic-card" id="card-4">
-      <div class="topic-hdr" onclick="toggleCard(4)">
+    <!-- L4 P2 SRS V&V RTM -->
+    <div class="topic-card" id="card-6">
+      <div class="topic-hdr" onclick="toggleCard(6)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(6,182,212,.12)"><i class="fa-solid fa-file-contract" style="color:var(--teal2)"></i></div>
-          <div><div class="topic-num">Lecture 4 — Part 2</div><div class="topic-title">SRS، V&V، RTM، Sign-off</div></div>
+          <div><div class="topic-num">Lecture 4 — Part 2 ⭐</div><div class="topic-title">SRS، V&V، RTM، Sign-off</div></div>
         </div>
         <i class="fa-solid fa-chevron-down chevron"></i>
       </div>
       <div class="topic-body">
-        <div class="def-box"><strong>SRS</strong> = وصف تفصيلي للنظام مع متطلباته. بيتعمل بناءً على اتفاق بين العميل والمطورين.</div>
-        <div class="def-box"><strong>Verification</strong> = "هل بنبني الحاجة صح؟" (مطابق للـ specs)<br><strong>Validation</strong> = "هل بنبني الحاجة الصح؟" (بيحقق احتياج العميل)</div>
-        <div class="def-box"><strong>RTM</strong> = وثيقة بتتبع العلاقات بين المتطلبات والـ artifacts<br><strong>Sign-off</strong> = موافقة الـ stakeholders الرسمية. بعدها أي تعديل له تكلفة إضافية!</div>
+        <div class="def-box"><strong>SRS</strong> = detailed description of a software system to be developed with its functional and non-functional requirements. Developed based on the agreement between customer and contractors.</div>
+        <p style="font-weight:700;font-size:.9rem;margin:.7rem 0 .4rem">Users of SRS:</p>
         <div class="srs-users">
           <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-building"></i> Customers</div><div class="srs-desc">يحددوا ويراجعوا المتطلبات</div></div>
           <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-briefcase"></i> Managers</div><div class="srs-desc">يخططوا للـ bid والتطوير</div></div>
-          <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-code"></i> Engineers</div><div class="srs-desc">يفهموا إيه اللي هيتبنى</div></div>
-          <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-vial"></i> Test Eng.</div><div class="srs-desc">يبنوا validation tests</div></div>
-          <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance</div><div class="srs-desc">يفهموا علاقات النظام</div></div>
+          <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-code"></i> System Engineers</div><div class="srs-desc">يفهموا إيه اللي هيتبنى</div></div>
+          <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-vial"></i> Test Engineers</div><div class="srs-desc">يبنوا <strong>validation tests</strong> للنظام</div></div>
+          <div class="srs-user"><div class="srs-role"><i class="fa-solid fa-screwdriver-wrench"></i> Maintenance Eng.</div><div class="srs-desc">يفهموا علاقات النظام</div></div>
         </div>
+        <div class="def-box"><strong>Verification</strong> = evaluating intermediary work products — "Are we building the thing <strong>right</strong>?"<br><strong>Validation</strong> = evaluating the final product — "Are we building the <strong>right</strong> thing?"</div>
+        <div class="v-table">
+          <tr><th></th><th>Verification</th><th>Validation</th></tr>
+          <tr><td>السؤال</td><td>Building it right?</td><td>Building the right thing?</td></tr>
+          <tr><td>التوقيت</td><td>Intermediary (أثناء التطوير)</td><td>Final product</td></tr>
+          <tr><td>الأنشطة</td><td>Reviews، meetings، inspections</td><td>Smoke، functional، regression، systems testing</td></tr>
+        </div>
+        <div class="def-box"><strong>RTM (Requirements Traceability Matrix)</strong> = document that establishes and tracks relationships between requirements and other artifacts throughout the project lifecycle.</div>
+        <p style="font-weight:700;font-size:.9rem;margin:.7rem 0 .4rem;color:var(--green2)">5 Benefits of RTM:</p>
+        <ul class="clist">
+          <li><strong>(1) Management of solution scope</strong>: evaluate value of each requirement، prioritize، avoid scope creep</li>
+          <li><strong>(2) Quick evaluation of potential changes</strong>: identify related objectives، easy identification of failed test case requirements</li>
+          <li><strong>(3) Reduced project risk</strong>: identify critical dependencies، better visibility and control</li>
+          <li><strong>(4) Promotes consistency</strong>: detect if two terms refer to same entity (e.g. Client vs Registered Customer)</li>
+          <li><strong>(5) Lifecycle monitoring & control</strong>: track which requirements are validated، pending، rejected، and which correspond to a specific release</li>
+        </ul>
+        <div class="def-box"><strong>Sign-off</strong> = indication that stakeholders agree with and approve requirements. بعده أي تعديل له تكلفة إضافية!</div>
+        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ</div>Test Engineers بيستخدموا الـ SRS لـ <strong>validation tests</strong> — مش للـ bid planning. الـ bid planning = Managers!</div>
       </div>
     </div>
 
     <!-- L5 Use Case -->
-    <div class="topic-card" id="card-5">
-      <div class="topic-hdr" onclick="toggleCard(5)">
+    <div class="topic-card" id="card-7">
+      <div class="topic-hdr" onclick="toggleCard(7)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(6,182,212,.12)"><i class="fa-solid fa-diagram-project" style="color:var(--teal2)"></i></div>
           <div><div class="topic-num">Lecture 5 — Part 1</div><div class="topic-title">UML — Use Case Diagrams</div></div>
@@ -591,23 +682,28 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
         <i class="fa-solid fa-chevron-down chevron"></i>
       </div>
       <div class="topic-body">
-        <div class="def-box"><strong>UML</strong> = لغة نمذجة بصرية موحدة — <strong>مش لغة برمجة!</strong></div>
+        <div class="def-box"><strong>UML</strong> = Unified Modeling Language — لغة نمذجة بصرية موحدة. <strong>مش لغة برمجة!</strong></div>
         <div class="uml-diag-grid">
-          <div class="uml-diag-card uml-struct"><div class="uml-diag-title" style="color:var(--blue2)"><i class="fa-solid fa-building"></i> Structure Diagrams</div><div style="font-size:.78rem;color:var(--text2)">Class، Component، Deployment</div></div>
+          <div class="uml-diag-card uml-struct"><div class="uml-diag-title" style="color:var(--blue2)"><i class="fa-solid fa-building"></i> Structure Diagrams</div><div style="font-size:.78rem;color:var(--text2)">Class، Component، Deployment، Package</div></div>
           <div class="uml-diag-card uml-behav"><div class="uml-diag-title" style="color:var(--green2)"><i class="fa-solid fa-bolt"></i> Behaviour Diagrams</div><div style="font-size:.78rem;color:var(--text2)">Use Case، Activity، State Machine</div></div>
           <div class="uml-diag-card uml-inter"><div class="uml-diag-title" style="color:var(--purple2)"><i class="fa-solid fa-comments"></i> Interaction Diagrams</div><div style="font-size:.78rem;color:var(--text2)">Sequence، Collaboration، Timing</div></div>
         </div>
         <div class="exam-box"><div class="lbl"><i class="fa-solid fa-bullseye"></i> «include» vs «extend» — الفرق الجوهري</div>
-          <strong>«include»</strong>: الـ base دايماً يستدعي الـ included (إلزامي). مثال: Withdraw «include» Verify PIN<br>
-          <strong>«extend»</strong>: سلوك اختياري. اتجاه السهم: Extension → Base. مثال: Print Receipt «extend» Withdraw
+          <strong>«include»</strong>: الـ base دايماً يستدعي الـ included (إلزامي). Arrow: Base → Included<br>
+          مثال: Withdraw «include» Verify PIN<br><br>
+          <strong>«extend»</strong>: سلوك اختياري/شرطي. Arrow: Extension → Base<br>
+          مثال: Print Receipt «extend» Withdraw
         </div>
-        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ</div>Actors دايماً <strong>بره</strong> الـ System Boundary — مش جوا!</div>
+        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخاخ</div>
+          Actors دايماً <strong>بره</strong> الـ System Boundary — مش جوا!<br>
+          سهم «extend» من الـ Extension للـ Base — مش العكس!
+        </div>
       </div>
     </div>
 
     <!-- L5 Activity -->
-    <div class="topic-card" id="card-6">
-      <div class="topic-hdr" onclick="toggleCard(6)">
+    <div class="topic-card" id="card-8">
+      <div class="topic-hdr" onclick="toggleCard(8)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(16,185,129,.12)"><i class="fa-solid fa-rotate" style="color:var(--green2)"></i></div>
           <div><div class="topic-num">Lecture 5 — Part 2</div><div class="topic-title">Activity Diagrams</div></div>
@@ -620,20 +716,20 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
           <li>⚫ <strong>Initial State</strong>: دايرة صغيرة ممتلئة</li>
           <li>⊙ <strong>Final State</strong>: دايرة جوا دايرة</li>
           <li>▭ <strong>Activity</strong>: مستطيل بزوايا مدورة</li>
-          <li>◇ <strong>Decision</strong>: ماسة + guards</li>
-          <li>▬ <strong>Fork/Join</strong>: خط سميك (concurrent)</li>
+          <li>◇ <strong>Decision</strong>: ماسة + guards على الأسهم</li>
+          <li>▬ <strong>Fork/Join</strong>: خط أسود سميك (concurrent flows)</li>
           <li>☰ <strong>Swimlanes</strong>: خانات لكل actor</li>
         </ul>
         <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخاخ</div>
           Fork = Concurrent مش Sequential<br>
-          نقطة البداية في Swimlanes = الركن العلوي <strong>الأيسر</strong>
+          نقطة البداية في Swimlanes = الركن العلوي <strong>الأيسر</strong> من أول column
         </div>
       </div>
     </div>
 
     <!-- L5 State -->
-    <div class="topic-card" id="card-7">
-      <div class="topic-hdr" onclick="toggleCard(7)">
+    <div class="topic-card" id="card-9">
+      <div class="topic-hdr" onclick="toggleCard(9)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(236,72,153,.12)"><i class="fa-solid fa-circle-nodes" style="color:var(--pink)"></i></div>
           <div><div class="topic-num">Lecture 5 — Part 3</div><div class="topic-title">State Machine Diagrams</div></div>
@@ -642,18 +738,14 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       </div>
       <div class="topic-body">
         <div class="def-box"><strong>State Machine</strong> = بيمثل دورة حياة كائن واحد من الإنشاء للإنهاء. بيوضح States والـ Transitions بينها.</div>
-        <div class="ex-box"><div class="lbl"><i class="fa-solid fa-pen-ruler"></i> مثال: User Account</div>
-          ⚫ → <strong>New</strong> → [isVerified()] → <strong>Active</strong> → [isSuspendRequested()] → <strong>Suspended</strong> → [isCancelRequested()] → <strong>Closed</strong> → ⊙
-        </div>
-        <div class="mem-box"><div class="lbl"><i class="fa-solid fa-brain"></i> Activity vs State Machine</div>
-          Activity = تدفق الأنشطة (Process) | State Machine = حالات كائن واحد (Lifecycle)
-        </div>
+        <div class="ex-box"><div class="lbl"><i class="fa-solid fa-pen-ruler"></i> مثال: User Account</div>⚫ → <strong>New</strong> → [isVerified()] → <strong>Active</strong> → [isSuspendRequested()] → <strong>Suspended</strong> → [isCancelRequested()] → <strong>Closed</strong> → ⊙</div>
+        <div class="mem-box"><div class="lbl"><i class="fa-solid fa-brain"></i> Activity vs State Machine</div>Activity = تدفق الأنشطة (Process/Business Flow) | State Machine = حالات كائن واحد (Lifecycle)</div>
       </div>
     </div>
 
-    <!-- L6 Class Diagrams -->
-    <div class="topic-card" id="card-8">
-      <div class="topic-hdr" onclick="toggleCard(8)">
+    <!-- L6 Class & Package -->
+    <div class="topic-card" id="card-10">
+      <div class="topic-hdr" onclick="toggleCard(10)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(59,130,246,.15)"><i class="fa-solid fa-table-cells" style="color:var(--blue2)"></i></div>
           <div><div class="topic-num">Lecture 6 — Part 1 🆕</div><div class="topic-title">Class Diagrams & Package Diagrams</div></div>
@@ -661,20 +753,10 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
         <i class="fa-solid fa-chevron-down chevron"></i>
       </div>
       <div class="topic-body">
-
-        <p style="font-weight:700;font-size:.93rem;margin:0 0 .55rem"><i class="fa-solid fa-diagram-project" style="color:var(--blue2)"></i> Class Diagram — الغرض والمكونات</p>
-        <ul class="clist">
-          <li>يوضح الـ <strong>static structure</strong> للـ classifiers في النظام</li>
-          <li>بيتكون من: مجموعة classes + مجموعة relationships بينهم</li>
-          <li>مفيد للمطورين وباقي أعضاء الفريق</li>
-        </ul>
-
-        <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .55rem"><i class="fa-solid fa-box" style="color:var(--teal2)"></i> Class Notation — الشكل</p>
-        <div class="def-box">الـ class بتتكوّن من 3 أجزاء:<br>
-          <strong>(1) Class Name</strong> — في القسم الأول<br>
-          <strong>(2) Attributes</strong> — في القسم الثاني. Type بعد colon<br>
-          <strong>(3) Operations (Methods)</strong> — في القسم الثالث. Return type بعد colon
-        </div>
+        <p style="font-weight:700;font-size:.93rem;margin:0 0 .55rem"><i class="fa-solid fa-diagram-project" style="color:var(--blue2)"></i> Class Diagram — Overview</p>
+        <div class="def-box">بيوضح الـ <strong>static structure</strong> للـ classifiers في النظام. بيتكون من classes + relationships. مفيد للمطورين وكل الفريق.</div>
+        <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .55rem"><i class="fa-solid fa-box" style="color:var(--teal2)"></i> Class Notation</p>
+        <div class="def-box">3 أقسام: (1) Class Name | (2) Attributes: name: type | (3) Operations: name(params): returnType</div>
         <div class="class-box">
           <div class="class-name">MyClass</div>
           <div class="class-attrs">
@@ -683,18 +765,17 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
             <div class="class-attr"><span class="vis-hash">#</span>attribute3 : Circle</div>
           </div>
           <div class="class-ops">
-            <div class="class-attr"><span class="vis-plus">+</span>op1(in p1 : bool, in p2) : String</div>
-            <div class="class-attr"><span class="vis-minus">-</span>op2(input p3 : int) : float</div>
+            <div class="class-attr"><span class="vis-plus">+</span>op1(in p1 : bool) : String</div>
+            <div class="class-attr"><span class="vis-minus">-</span>op2(in p3 : int) : float</div>
             <div class="class-attr"><span class="vis-hash">#</span>op3(out p6) : Class6*</div>
           </div>
         </div>
-
         <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .55rem"><i class="fa-solid fa-eye" style="color:var(--yellow2)"></i> Visibility (Access Modifiers)</p>
         <div style="display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.85rem">
-          <div style="background:rgba(16,185,129,.1);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(16,185,129,.2)"><code style="color:var(--green2);font-size:.85rem">+</code> = <strong>public</strong> — accessible by any class</div>
-          <div style="background:rgba(239,68,68,.08);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(239,68,68,.18)"><code style="color:var(--red2);font-size:.85rem">-</code> = <strong>private</strong> — same class only</div>
-          <div style="background:rgba(245,158,11,.08);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(245,158,11,.18)"><code style="color:var(--yellow2);font-size:.85rem">#</code> = <strong>protected</strong> — class + subclasses</div>
-          <div style="background:rgba(6,182,212,.08);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(6,182,212,.18)"><code style="color:var(--teal2);font-size:.85rem">~</code> = <strong>package</strong> — same package only</div>
+          <div style="background:rgba(16,185,129,.1);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(16,185,129,.2)"><code style="color:var(--green2)">+</code> = <strong>public</strong> — accessible by any class</div>
+          <div style="background:rgba(239,68,68,.08);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(239,68,68,.18)"><code style="color:var(--red2)">-</code> = <strong>private</strong> — same class only</div>
+          <div style="background:rgba(245,158,11,.08);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(245,158,11,.18)"><code style="color:var(--yellow2)">#</code> = <strong>protected</strong> — class + subclasses</div>
+          <div style="background:rgba(6,182,212,.08);border-radius:8px;padding:.45rem .75rem;font-size:.82rem;border:1px solid rgba(6,182,212,.18)"><code style="color:var(--teal2)">~</code> = <strong>package</strong> — same package only</div>
         </div>
         <table class="vis-table">
           <tr><th>Access Right</th><th>public (+)</th><th>private (-)</th><th>protected (#)</th><th>package (~)</th></tr>
@@ -702,29 +783,11 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
           <tr><td>Derived classes</td><td class="yes-cell">✓</td><td class="no-cell">✗</td><td class="yes-cell">✓</td><td class="yes-cell">✓</td></tr>
           <tr><td>Any other class</td><td class="yes-cell">✓</td><td class="no-cell">✗</td><td class="no-cell">✗</td><td class="cond-cell">same package</td></tr>
         </table>
-
         <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .55rem"><i class="fa-solid fa-link" style="color:var(--purple2)"></i> Class Relationships (4 أنواع)</p>
-        <div class="relation-card" style="border-color:var(--green)">
-          <strong style="color:var(--green2)"><i class="fa-solid fa-arrow-up"></i> Inheritance (Generalization)</strong> — "is-a" relationship<br>
-          <span style="font-size:.79rem;color:var(--text2)">خط صلب بـ hollow arrowhead من الـ child للـ parent. الـ abstract class اسمه بـ italics.</span><br>
-          <span style="font-size:.78rem;color:var(--text3)">مثال: Dog <em>is-a</em> Animal → Subclass1 وSubclass2 من SuperClass</span>
-        </div>
-        <div class="relation-card" style="border-color:var(--blue)">
-          <strong style="color:var(--blue2)"><i class="fa-solid fa-minus"></i> Simple Association</strong> — خط صلب بسيط<br>
-          <span style="font-size:.79rem;color:var(--text2)">structural link بين كلاسين. بيبين إن في علاقة بينهم بدون تحديد طبيعتها.</span><br>
-          <span style="font-size:.78rem;color:var(--text3)">أسماء العلاقات بتتكتب في النص. السهم الصغير بيحدد اتجاه القراءة.</span>
-        </div>
-        <div class="relation-card" style="border-color:var(--yellow)">
-          <strong style="color:var(--yellow2)"><i class="fa-regular fa-diamond"></i> Aggregation</strong> — "part-of" (unfilled diamond ◇)<br>
-          <span style="font-size:.79rem;color:var(--text2)">الـ part يمكن يعيش بدون الـ whole. Objects لهم <strong>separate lifetimes</strong>.</span><br>
-          <span style="font-size:.78rem;color:var(--text3)">مثال: Computer ◇ — Mainboard, CPU, Memory. الـ CPU يمكن يشتغل منفرد.</span>
-        </div>
-        <div class="relation-card" style="border-color:var(--red)">
-          <strong style="color:var(--red2)"><i class="fa-solid fa-diamond"></i> Composition</strong> — "part-of" (filled diamond ◆)<br>
-          <span style="font-size:.79rem;color:var(--text2)">الـ parts بتتدمر لما الـ whole بيتدمر. <strong>Class2 cannot stand by itself.</strong></span><br>
-          <span style="font-size:.78rem;color:var(--text3)">مثال: Person ◆ — Head, Hand, Leg. الـ Head مش بتعيش بدون Person.</span>
-        </div>
-
+        <div class="relation-card" style="border-color:var(--green)"><strong style="color:var(--green2)"><i class="fa-solid fa-arrow-up"></i> Inheritance (Generalization)</strong> — "is-a"<br><span style="font-size:.79rem;color:var(--text2)">Solid line + hollow arrowhead من الـ child للـ parent. Abstract class بـ italics.</span></div>
+        <div class="relation-card" style="border-color:var(--blue)"><strong style="color:var(--blue2)"><i class="fa-solid fa-minus"></i> Simple Association</strong> — structural link<br><span style="font-size:.79rem;color:var(--text2)">Plain solid line بين كلاسين. اسم العلاقة في المنتصف. سهم صغير لاتجاه القراءة.</span></div>
+        <div class="relation-card" style="border-color:var(--yellow)"><strong style="color:var(--yellow2)"><i class="fa-regular fa-diamond"></i> Aggregation ◇</strong> — "part-of" مع استقلالية<br><span style="font-size:.79rem;color:var(--text2)">Unfilled diamond. Objects have <strong>separate lifetimes</strong>. مثال: Computer ◇— CPU (الـ CPU يعيش بدون Computer)</span></div>
+        <div class="relation-card" style="border-color:var(--red)"><strong style="color:var(--red2)"><i class="fa-solid fa-diamond"></i> Composition ◆</strong> — "part-of" بدون استقلالية<br><span style="font-size:.79rem;color:var(--text2)">Filled diamond. Parts die with whole. مثال: Person ◆— Head (الـ Head مش تعيش بدون Person)</span></div>
         <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .55rem"><i class="fa-solid fa-hashtag" style="color:var(--teal2)"></i> Multiplicity</p>
         <div class="multi-grid">
           <div class="multi-item"><span class="multi-sym">1</span><span style="color:var(--text2)">Exactly one</span></div>
@@ -733,52 +796,27 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
           <div class="multi-item"><span class="multi-sym">1..*</span><span style="color:var(--text2)">One or more</span></div>
           <div class="multi-item"><span class="multi-sym">3..4</span><span style="color:var(--text2)">Exact range</span></div>
         </div>
-        <div class="ex-box"><div class="lbl"><i class="fa-solid fa-pen-ruler"></i> Multiplicity Example</div>
-          "A Student can take many Courses and many Students can be enrolled in one Course"<br>
-          → Student * —takes→ * Course (many-to-many)
-        </div>
-        <div class="exam-box"><div class="lbl"><i class="fa-solid fa-bullseye"></i> Aggregation vs Composition — الفرق الجوهري</div>
-          <strong>Aggregation ◇</strong>: الـ parts تعيش مستقلة. لو حذفت الـ whole الـ parts مش هتتحذف.<br>
-          <strong>Composition ◆</strong>: الـ parts بتموت مع الـ whole. لو حذفت Person → Head و Hand بتتحذف.
-        </div>
-        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ الامتحان</div>
-          <strong>+</strong> = public مش private! كتير بيغلطوا ويقلبوا + و -<br>
-          ❌ "+" = private ✅ "+" = public | ❌ "-" = public ✅ "-" = private
-        </div>
-
+        <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخ الامتحان</div><strong>+</strong> = public مش private! كتير بيغلطوا ويقلبوا + و -<br>Inheritance = hollow arrowhead — مش filled!<br>Composition ◆ filled diamond — Aggregation ◇ unfilled diamond</div>
         <hr style="border-color:var(--border);margin:1rem 0">
         <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .55rem"><i class="fa-solid fa-folder" style="color:var(--orange2)"></i> Package Diagrams</p>
-        <div class="def-box"><strong>Package Diagram</strong> = بيوضح ترتيب وتنظيم الـ model elements في المشاريع المتوسطة والكبيرة. بيساعد في تبسيط الـ class diagrams عن طريق تجميع الـ classes في packages.</div>
+        <div class="def-box"><strong>Package Diagram</strong> = organizes model elements into groups (packages) to simplify complex class diagrams. مفيد في المشاريع المتوسطة والكبيرة.</div>
         <ul class="clist">
-          <li>الـ packages بتتمثل كـ <strong>file folders</strong> بزاوية صغيرة فوق</li>
-          <li>الـ dotted arrows = <strong>dependencies</strong> بين الـ packages</li>
-          <li>Package names فريدة — لكن classes في packages مختلفة ممكن تتشارك الاسم</li>
+          <li>Packages = file folders (مستطيل بزاوية صغيرة فوق)</li>
+          <li>Dotted arrows = dependencies بين packages</li>
+          <li>Package names لازم <strong>unique</strong> في النظام</li>
+          <li>Classes في packages مختلفة ممكن تتشارك نفس الاسم</li>
         </ul>
         <div style="display:flex;flex-wrap:wrap;gap:.6rem;margin:.7rem 0">
-          <div style="background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.22);border-radius:8px;padding:.55rem .8rem;font-size:.81rem;flex:1;min-width:180px">
-            <strong style="color:var(--blue2)">«import»</strong><br>
-            <span style="color:var(--text2)">Package1 يستورد وظائف Package2 بالكامل</span>
-          </div>
-          <div style="background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.22);border-radius:8px;padding:.55rem .8rem;font-size:.81rem;flex:1;min-width:180px">
-            <strong style="color:var(--green2)">«access»</strong><br>
-            <span style="color:var(--text2)">Package1 يحتاج مساعدة من Package2</span>
-          </div>
+          <div style="background:rgba(59,130,246,.07);border:1px solid rgba(59,130,246,.22);border-radius:8px;padding:.55rem .8rem;font-size:.81rem;flex:1;min-width:180px"><strong style="color:var(--blue2)">«import»</strong><br><span style="color:var(--text2)">Package imports the functionality of another package</span></div>
+          <div style="background:rgba(16,185,129,.07);border:1px solid rgba(16,185,129,.22);border-radius:8px;padding:.55rem .8rem;font-size:.81rem;flex:1;min-width:180px"><strong style="color:var(--green2)">«access»</strong><br><span style="color:var(--text2)">Package requires help from functions of another package</span></div>
         </div>
-        <div class="ex-box"><div class="lbl"><i class="fa-solid fa-pen-ruler"></i> Order Processing System</div>
-          Packages: UI Framework, Track Order, Order Processing, Shipping<br>
-          Track Order ↔ Order Processing: <strong>«access»</strong> dual (بيحتاجوا بعض)<br>
-          Shipping → Track Order: <strong>«import»</strong> (بتستورد منه)<br>
-          UI Framework → Track Order: <strong>«access»</strong>
-        </div>
-        <div class="mem-box"><div class="lbl"><i class="fa-solid fa-brain"></i> Fully Qualified Name</div>
-          <code style="font-family:'JetBrains Mono',monospace;color:var(--teal2)">java::util::Date</code> → Owner::Package::Class
-        </div>
+        <div class="mem-box"><div class="lbl"><i class="fa-solid fa-brain"></i> Fully Qualified Name</div><code style="font-family:'JetBrains Mono',monospace;color:var(--teal2)">java::util::Date</code> → Owner::Package::Class</div>
       </div>
     </div>
 
     <!-- L6 Sequence -->
-    <div class="topic-card" id="card-9">
-      <div class="topic-hdr" onclick="toggleCard(9)">
+    <div class="topic-card" id="card-11">
+      <div class="topic-hdr" onclick="toggleCard(11)">
         <div class="topic-hdr-l">
           <div class="topic-icon" style="background:rgba(139,92,246,.15)"><i class="fa-solid fa-timeline" style="color:var(--purple2)"></i></div>
           <div><div class="topic-num">Lecture 6 — Part 2 🆕</div><div class="topic-title">Sequence Diagrams</div></div>
@@ -786,89 +824,28 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
         <i class="fa-solid fa-chevron-down chevron"></i>
       </div>
       <div class="topic-body">
-        <div class="def-box"><strong>Sequence Diagram</strong> = Interaction Diagram بيوضح كيف الـ objects بتتفاعل مع بعض عبر الزمن. الـ vertical axis = الوقت. الـ horizontal axis = الـ objects.</div>
-
-        <p style="font-weight:700;font-size:.93rem;margin:.8rem 0 .5rem"><i class="fa-solid fa-bullseye" style="color:var(--teal2)"></i> أهداف Sequence Diagrams</p>
-        <ul class="clist">
-          <li>Model high-level interaction between active objects</li>
-          <li>يوضح التفاعل بين objects في سياق الـ use case</li>
-          <li>يعرض التسلسل الزمني للرسائل بين الـ lifelines</li>
-          <li>يدعم Generic (كل المسارات) أو Specific (مسار واحد) interactions</li>
-        </ul>
-
+        <div class="def-box"><strong>Sequence Diagram</strong> = Interaction Diagram بيوضح كيف الـ objects بتتفاعل عبر الزمن. Vertical axis = الوقت (هبوطاً). Horizontal axis = الـ objects/participants.</div>
         <p style="font-weight:700;font-size:.93rem;margin:.8rem 0 .5rem"><i class="fa-solid fa-puzzle-piece" style="color:var(--purple2)"></i> Notation</p>
         <div class="seq-notations">
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-person"></i> Actor</div>
-            <div style="color:var(--text2);font-size:.79rem">Stick figure. خارجي عن الـ subject. يمثل human users, hardware, أو أنظمة خارجية.</div>
-          </div>
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-grip-lines-vertical"></i> Lifeline</div>
-            <div style="color:var(--text2);font-size:.79rem">مستطيل فوقه خط منقط رأسي. يمثل participant واحد في التفاعل.</div>
-          </div>
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-rectangle-list"></i> Activation</div>
-            <div style="color:var(--text2);font-size:.79rem">مستطيل رفيع على الـ lifeline. الفترة اللي فيها الـ element بيؤدي operation.</div>
-          </div>
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-arrow-right"></i> Call Message</div>
-            <div style="color:var(--text2);font-size:.79rem">خط صلب بسهم. يمثل استدعاء operation على الـ target lifeline.</div>
-          </div>
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-arrow-left"></i> Return Message</div>
-            <div style="color:var(--text2);font-size:.79rem">خط منقط بسهم رجعي. يرجع معلومات للـ caller.</div>
-          </div>
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-rotate-left"></i> Self Message</div>
-            <div style="color:var(--text2);font-size:.79rem">رسالة للـ lifeline نفسه. loop or recursion داخلي.</div>
-          </div>
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-rotate"></i> Recursive Message</div>
-            <div style="color:var(--text2);font-size:.79rem">Self message بـ activation جديدة فوق الأولى. يوضح الـ recursion.</div>
-          </div>
-          <div class="seq-note">
-            <div class="seq-note-title"><i class="fa-solid fa-xmark"></i> Destroy Message</div>
-            <div style="color:var(--text2);font-size:.79rem">يطلب تدمير lifecycle الـ target lifeline. علامة X في نهاية الـ lifeline.</div>
-          </div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-person"></i> Actor</div><div style="color:var(--text2);font-size:.79rem">Stick figure. External entity (human، hardware، or external system)</div></div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-grip-lines-vertical"></i> Lifeline</div><div style="color:var(--text2);font-size:.79rem">مستطيل فوق + خط منقط رأسي. Represents an <strong>individual participant</strong></div></div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-rectangle-list"></i> Activation</div><div style="color:var(--text2);font-size:.79rem">مستطيل رفيع على الـ lifeline. Period during which an element is performing an operation</div></div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-arrow-right"></i> Call Message</div><div style="color:var(--text2);font-size:.79rem">Solid line + filled arrow. Invocation of an operation on target lifeline</div></div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-arrow-left"></i> Return Message</div><div style="color:var(--text2);font-size:.79rem">Dashed line + open arrow. Pass information back to the caller</div></div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-rotate-left"></i> Self Message</div><div style="color:var(--text2);font-size:.79rem">Arrow back to same lifeline. Internal call or loop</div></div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-rotate"></i> Recursive Message</div><div style="color:var(--text2);font-size:.79rem">Self message + new activation on top of existing one. Shows recursion</div></div>
+          <div class="seq-note"><div class="seq-note-title"><i class="fa-solid fa-xmark"></i> Destroy Message</div><div style="color:var(--text2);font-size:.79rem">Message + X mark. Terminates the lifecycle of target lifeline</div></div>
         </div>
-
-        <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .5rem"><i class="fa-solid fa-layer-group" style="color:var(--yellow2)"></i> Combined Fragments (Sequence Fragments)</p>
-        <div class="def-box">الـ Combined Fragment = صندوق بيحيط بجزء من التفاعل. في الركن العلوي الأيسر: اسم الـ operator يحدد نوعه.</div>
+        <p style="font-weight:700;font-size:.93rem;margin:.85rem 0 .5rem"><i class="fa-solid fa-layer-group" style="color:var(--yellow2)"></i> Combined Fragments</p>
         <div class="frag-grid">
-          <div class="frag-card frag-alt">
-            <div class="frag-title" style="color:var(--yellow2)">alt</div>
-            <div style="font-size:.79rem;color:var(--text2)"><strong>Alternative</strong> — زي الـ if/else. فقط الـ fragment اللي شرطه صح هينفذ.</div>
-          </div>
-          <div class="frag-card frag-loop">
-            <div class="frag-title" style="color:var(--blue2)">loop</div>
-            <div style="font-size:.79rem;color:var(--text2)"><strong>Loop</strong> — بيتنفذ أكتر من مرة. الـ guard بيحدد شرط الاستمرار.</div>
-          </div>
-          <div class="frag-card frag-opt">
-            <div class="frag-title" style="color:var(--green2)">opt</div>
-            <div style="font-size:.79rem;color:var(--text2)"><strong>Optional</strong> — بيتنفذ بس لو الشرط صح. زي alt بـ trace واحد فقط.</div>
-          </div>
+          <div class="frag-card frag-alt"><div class="frag-title" style="color:var(--yellow2)">alt</div><div style="font-size:.79rem;color:var(--text2)"><strong>Alternative</strong> — if/else. Only the trace whose condition is true executes.</div></div>
+          <div class="frag-card frag-loop"><div class="frag-title" style="color:var(--blue2)">loop</div><div style="font-size:.79rem;color:var(--text2)"><strong>Loop</strong> — executes multiple times based on guard condition.</div></div>
+          <div class="frag-card frag-opt"><div class="frag-title" style="color:var(--green2)">opt</div><div style="font-size:.79rem;color:var(--text2)"><strong>Optional</strong> — equivalent to alt with only one trace.</div></div>
         </div>
-
-        <div class="ex-box" style="margin-top:.9rem"><div class="lbl"><i class="fa-solid fa-pen-ruler"></i> Facebook Auth — Case Study</div>
-          <strong>Lifelines:</strong> User، :WebBrowser، :Application، :Facebook Authorization Server، :Facebook Content Server<br><br>
-          <strong>Basic Flow:</strong><br>
-          User → WebBrowser: get FB resource<br>
-          WebBrowser → Application: request FB access<br>
-          Application → Auth Server: authorize<br>
-          Auth Server → WebBrowser: permission form<br>
-          User → WebBrowser: user permission<br>
-          WebBrowser → Auth Server: process permission<br><br>
-          <strong>alt fragment:</strong><br>
-          [permission granted]: Auth Server → Application: FB authorization code → access token → get protected resource ✓<br>
-          [no permission]: Application → WebBrowser: no authorization → FB resource not available<br><br>
-          <strong>loop fragment:</strong> [for each line item]<br>
-          <strong>opt fragment:</strong> [needs confirmation] → 1.3: confirm
-        </div>
-
         <div class="trap-box"><div class="lbl"><i class="fa-solid fa-triangle-exclamation"></i> فخاخ Sequence Diagram</div>
-          ❌ الـ Return Message = خط <strong>منقط</strong> (مش صلب)<br>
-          ❌ الـ Time axis = <strong>رأسي</strong> (هبوطاً) — مش أفقي<br>
-          ❌ الـ Fragment operator في الركن العلوي <strong>الأيسر</strong> من الـ combined fragment box
+          ❌ Return Message = خط صلب — ✅ Return Message = خط <strong>منقط</strong><br>
+          ❌ Time axis = أفقي — ✅ Time axis = <strong>رأسي</strong> هبوطاً<br>
+          ❌ Fragment operator في الركن العلوي الأيمن — ✅ في الركن العلوي <strong>الأيسر</strong>
         </div>
       </div>
     </div>
@@ -878,130 +855,132 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 
 <hr class="divider">
 
-<!-- ======= COMPARISONS ======= -->
+<!-- COMPARISONS -->
 <div class="section reveal" id="compare">
   <h2 class="sec-title"><i class="fa-solid fa-scale-balanced" style="color:var(--blue2)"></i> <span class="hi">مقارنات الامتحان</span></h2>
   <p class="sec-sub">الجداول دي هي أكتر حاجة بتيجي في الامتحان</p>
   <div class="comp-grid">
-
     <div class="comp-card">
       <div class="comp-title"><i class="fa-solid fa-circle-exclamation" style="color:var(--red2)"></i> Error vs Fault vs Failure</div>
       <table class="comp-table"><tr><th>المصطلح</th><th>التعريف</th><th>مثال</th></tr>
-        <tr><td>Error</td><td>غلطة بشرية</td><td>نسيان null check</td></tr>
-        <tr><td>Fault/Bug</td><td>الكود المعيب</td><td>شرط غلط في الكود</td></tr>
-        <tr><td>Failure</td><td>فشل أمام المستخدم</td><td>app بيقفل فجأة</td></tr>
+        <tr><td>Error</td><td>Human mistake</td><td>نسيان null check</td></tr>
+        <tr><td>Fault/Bug</td><td>Manifestation in code</td><td>شرط غلط في الكود</td></tr>
+        <tr><td>Failure</td><td>Deviation from expected service</td><td>app بيقفل فجأة</td></tr>
       </table>
     </div>
-
     <div class="comp-card">
       <div class="comp-title"><i class="fa-solid fa-check" style="color:var(--green2)"></i> Verification vs Validation</div>
       <table class="comp-table"><tr><th></th><th>Verification</th><th>Validation</th></tr>
-        <tr><td>السؤال</td><td>بنبنيه صح؟</td><td>بنبني الصح؟</td></tr>
-        <tr><td>التوقيت</td><td>أثناء التطوير</td><td>في النهاية</td></tr>
-        <tr><td>الأنشطة</td><td>Reviews, inspections</td><td>Black/white box testing</td></tr>
+        <tr><td>السؤال</td><td>Building it right?</td><td>Building the right thing?</td></tr>
+        <tr><td>التوقيت</td><td>Intermediary</td><td>Final product</td></tr>
+        <tr><td>الأنشطة</td><td>Reviews، inspections</td><td>Black/white box testing</td></tr>
       </table>
     </div>
-
     <div class="comp-card">
       <div class="comp-title"><i class="fa-solid fa-diagram-project" style="color:var(--teal2)"></i> «include» vs «extend»</div>
       <table class="comp-table"><tr><th></th><th>«include»</th><th>«extend»</th></tr>
-        <tr><td>الاستدعاء</td><td>دايماً إلزامي</td><td>اختياري / شرطي</td></tr>
+        <tr><td>الاستدعاء</td><td>Always — mandatory</td><td>Optional / conditional</td></tr>
         <tr><td>اتجاه السهم</td><td>Base → Included</td><td>Extension → Base</td></tr>
         <tr><td>مثال</td><td>Login includes Auth</td><td>Print extends Withdraw</td></tr>
       </table>
     </div>
-
     <div class="comp-card">
       <div class="comp-title"><i class="fa-solid fa-rotate" style="color:var(--orange2)"></i> Activity vs State Machine</div>
       <table class="comp-table"><tr><th></th><th>Activity</th><th>State Machine</th></tr>
-        <tr><td>الـ Focus</td><td>تدفق الأنشطة</td><td>حالات كائن</td></tr>
-        <tr><td>يوضح</td><td>Business Process</td><td>دورة حياة الكائن</td></tr>
+        <tr><td>الـ Focus</td><td>تدفق الأنشطة</td><td>حالات كائن واحد</td></tr>
+        <tr><td>يوضح</td><td>Business Process</td><td>Object Lifecycle</td></tr>
         <tr><td>مثال</td><td>Ticket Vending Machine</td><td>User Account Lifecycle</td></tr>
       </table>
     </div>
-
     <div class="comp-card">
       <div class="comp-title"><i class="fa-regular fa-diamond" style="color:var(--yellow2)"></i> Aggregation vs Composition</div>
       <table class="comp-table"><tr><th></th><th>Aggregation ◇</th><th>Composition ◆</th></tr>
-        <tr><td>العلاقة</td><td>"part of" مع استقلالية</td><td>"part of" بدون استقلالية</td></tr>
+        <tr><td>العلاقة</td><td>"part-of" مع استقلالية</td><td>"part-of" بدون استقلالية</td></tr>
         <tr><td>Lifetimes</td><td>Separate lifetimes</td><td>Parts die with whole</td></tr>
         <tr><td>الرمز</td><td>Unfilled diamond</td><td>Filled diamond</td></tr>
         <tr><td>مثال</td><td>Computer — CPU</td><td>Person — Head</td></tr>
       </table>
     </div>
-
     <div class="comp-card">
       <div class="comp-title"><i class="fa-solid fa-eye" style="color:var(--purple2)"></i> Class Visibility Summary</div>
       <table class="comp-table"><tr><th>Symbol</th><th>Name</th><th>من يصلها؟</th></tr>
         <tr><td>+</td><td>public</td><td>أي class</td></tr>
         <tr><td>-</td><td>private</td><td>نفس الـ class فقط</td></tr>
-        <tr><td>#</td><td>protected</td><td>نفس الـ class + subclasses</td></tr>
+        <tr><td>#</td><td>protected</td><td>class + subclasses</td></tr>
         <tr><td>~</td><td>package</td><td>نفس الـ package</td></tr>
       </table>
     </div>
-
+    <div class="comp-card">
+      <div class="comp-title"><i class="fa-solid fa-chart-simple" style="color:var(--yellow2)"></i> SW-CMM Levels</div>
+      <table class="comp-table"><tr><th>Level</th><th>Name</th><th>الخاصية الرئيسية</th></tr>
+        <tr><td>1</td><td>Initial</td><td>Ad hoc، chaotic</td></tr>
+        <tr><td>2</td><td>Repeatable</td><td>Basic PM، tracking</td></tr>
+        <tr><td>3</td><td>Defined</td><td>Documented، CASE</td></tr>
+        <tr><td>4</td><td>Managed</td><td>Statistical control</td></tr>
+        <tr><td>5</td><td>Optimizing</td><td>Continuous improvement</td></tr>
+      </table>
+    </div>
+    <div class="comp-card">
+      <div class="comp-title"><i class="fa-solid fa-wrench" style="color:var(--pink)"></i> Maintenance Types</div>
+      <table class="comp-table"><tr><th>Type</th><th>السبب</th></tr>
+        <tr><td>Adaptive</td><td>Changes in environment (OS، DBMS)</td></tr>
+        <tr><td>Perfective</td><td>New/changed user requirements</td></tr>
+        <tr><td>Corrective</td><td>Fixing errors found by users</td></tr>
+        <tr><td>Preventive</td><td>Increase future maintainability</td></tr>
+      </table>
+    </div>
     <div class="comp-card">
       <div class="comp-title"><i class="fa-solid fa-timeline" style="color:var(--purple2)"></i> Sequence Diagram Messages</div>
       <table class="comp-table"><tr><th>النوع</th><th>الشكل</th><th>الوظيفة</th></tr>
-        <tr><td>Call</td><td>خط صلب + سهم →</td><td>استدعاء operation</td></tr>
-        <tr><td>Return</td><td>خط منقط + سهم ←</td><td>إرجاع نتيجة للـ caller</td></tr>
-        <tr><td>Self</td><td>سهم للنفس</td><td>استدعاء داخلي</td></tr>
-        <tr><td>Destroy</td><td>رسالة + علامة X</td><td>تدمير الـ lifecycle</td></tr>
+        <tr><td>Call</td><td>Solid line + filled arrow →</td><td>Operation invocation</td></tr>
+        <tr><td>Return</td><td>Dashed line + open arrow ←</td><td>Pass info back to caller</td></tr>
+        <tr><td>Self</td><td>Arrow to same lifeline</td><td>Internal call</td></tr>
+        <tr><td>Destroy</td><td>Message + X mark</td><td>Terminate lifecycle</td></tr>
       </table>
     </div>
-
-    <div class="comp-card">
-      <div class="comp-title"><i class="fa-solid fa-layer-group" style="color:var(--yellow2)"></i> Combined Fragments</div>
-      <table class="comp-table"><tr><th>Operator</th><th>المعنى</th><th>مثال</th></tr>
-        <tr><td>alt</td><td>if/else — بديل</td><td>[permission granted] / [else]</td></tr>
-        <tr><td>loop</td><td>تكرار بشرط</td><td>[for each line item]</td></tr>
-        <tr><td>opt</td><td>اختياري بشرط</td><td>[needs confirmation]</td></tr>
-      </table>
-    </div>
-
-    <div class="comp-card">
-      <div class="comp-title"><i class="fa-solid fa-folder" style="color:var(--orange2)"></i> Package Dependencies</div>
-      <table class="comp-table"><tr><th></th><th>«import»</th><th>«access»</th></tr>
-        <tr><td>الوظيفة</td><td>يستورد functionality</td><td>يحتاج مساعدة منها</td></tr>
-        <tr><td>الشكل</td><td>خط منقط + «import»</td><td>خط منقط + «access»</td></tr>
-      </table>
-    </div>
-
     <div class="comp-card">
       <div class="comp-title"><i class="fa-solid fa-sort" style="color:var(--pink)"></i> MoSCoW Priority</div>
       <table class="comp-table"><tr><th>الحرف</th><th>بدونه؟</th><th>أقصى جهد</th></tr>
-        <tr><td>M — Must</td><td>المشروع فاشل</td><td>60%</td></tr>
-        <tr><td>S — Should</td><td>لسه viable</td><td>80%</td></tr>
-        <tr><td>C — Could</td><td>مش حرج</td><td>100%</td></tr>
-        <tr><td>W — Won't</td><td>next release</td><td>—</td></tr>
+        <tr><td>M — Must</td><td>Project FAILS</td><td>60%</td></tr>
+        <tr><td>S — Should</td><td>Still viable</td><td>80%</td></tr>
+        <tr><td>C — Could</td><td>Nice to have</td><td>100%</td></tr>
+        <tr><td>W — Won't</td><td>Next release</td><td>—</td></tr>
       </table>
     </div>
-
+    <div class="comp-card">
+      <div class="comp-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--orange2)"></i> Elicitation Difficulties</div>
+      <table class="comp-table"><tr><th>#</th><th>النوع</th></tr>
+        <tr><td>1</td><td>Articulation problems</td></tr>
+        <tr><td>2</td><td>Communication barriers</td></tr>
+        <tr><td>3</td><td>Knowledge/cognitive limitations</td></tr>
+        <tr><td>4</td><td>Human behavior issues</td></tr>
+        <tr><td>5</td><td>Technical issues</td></tr>
+      </table>
+    </div>
   </div>
 </div>
 
 <hr class="divider">
 
-<!-- ======= CASE STUDY LAB ======= -->
+<!-- CASE STUDY LAB -->
 <div class="section reveal" id="caselab">
   <h2 class="sec-title"><i class="fa-solid fa-flask" style="color:var(--blue2)"></i> <span class="hi">Case Study Lab</span></h2>
   <p class="sec-sub">خطوات مضمونة لحل أي case study في الامتحان</p>
   <div class="tabs">
-    <button class="tab-btn active" onclick="switchTab('uc-tab',this)"><i class="fa-solid fa-diagram-project me-1"></i> Use Case</button>
-    <button class="tab-btn" onclick="switchTab('act-tab',this)"><i class="fa-solid fa-rotate me-1"></i> Activity</button>
-    <button class="tab-btn" onclick="switchTab('state-tab',this)"><i class="fa-solid fa-circle-nodes me-1"></i> State Machine</button>
-    <button class="tab-btn" onclick="switchTab('class-tab',this)"><i class="fa-solid fa-table-cells me-1"></i> Class Diagram</button>
-    <button class="tab-btn" onclick="switchTab('seq-tab',this)"><i class="fa-solid fa-timeline me-1"></i> Sequence</button>
-    <button class="tab-btn" onclick="switchTab('smart-tab',this)"><i class="fa-solid fa-bullseye me-1"></i> SMART</button>
-    <button class="tab-btn" onclick="switchTab('practice-tab',this)"><i class="fa-solid fa-pen me-1"></i> تمرين</button>
+    <button class="tab-btn active" onclick="switchTab('uc-tab',this)">Use Case</button>
+    <button class="tab-btn" onclick="switchTab('act-tab',this)">Activity</button>
+    <button class="tab-btn" onclick="switchTab('state-tab',this)">State Machine</button>
+    <button class="tab-btn" onclick="switchTab('class-tab',this)">Class Diagram</button>
+    <button class="tab-btn" onclick="switchTab('seq-tab',this)">Sequence</button>
+    <button class="tab-btn" onclick="switchTab('smart-tab',this)">SMART</button>
+    <button class="tab-btn" onclick="switchTab('practice-tab',this)">تمرين</button>
   </div>
-
   <div id="uc-tab" class="tab-pane active">
     <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
-      <h4 style="color:var(--teal2);font-size:.92rem;margin-bottom:.85rem"><i class="fa-solid fa-diagram-project"></i> Use Case Recipe</h4>
+      <h4 style="color:var(--teal2);font-size:.92rem;margin-bottom:.85rem">Use Case Recipe</h4>
       <ol class="recipe-steps">
         <li><strong>Identify Actors</strong>: من بيتعامل مع النظام؟ (بشر أو أنظمة خارجية — بره الـ System Boundary)</li>
-        <li><strong>Identify Use Cases</strong>: النظام بيعمل إيه؟ (أفعال: Withdraw, Login, Register)</li>
+        <li><strong>Identify Use Cases</strong>: النظام بيعمل إيه؟ (أفعال: Withdraw، Login، Register)</li>
         <li><strong>Draw System Boundary</strong>: مستطيل يحيط بكل الـ use cases</li>
         <li><strong>Connect with Associations</strong>: كل actor للـ use cases اللي بيتعامل معاها (خط بسيط)</li>
         <li><strong>Identify «include»</strong>: في use case بيتنادى إلزامياً دايماً من تاني؟</li>
@@ -1009,10 +988,9 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       </ol>
     </div>
   </div>
-
   <div id="act-tab" class="tab-pane">
     <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
-      <h4 style="color:var(--green2);font-size:.92rem;margin-bottom:.85rem"><i class="fa-solid fa-rotate"></i> Activity Diagram Recipe</h4>
+      <h4 style="color:var(--green2);font-size:.92rem;margin-bottom:.85rem">Activity Diagram Recipe</h4>
       <ol class="recipe-steps">
         <li><strong>حدد الـ Actors / Swimlanes</strong>: كل actor له swimlane</li>
         <li><strong>ابدأ بـ Initial State ⚫</strong>: في أول swimlane — الركن العلوي الأيسر</li>
@@ -1023,12 +1001,11 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       </ol>
     </div>
   </div>
-
   <div id="state-tab" class="tab-pane">
     <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
-      <h4 style="color:var(--pink);font-size:.92rem;margin-bottom:.85rem"><i class="fa-solid fa-circle-nodes"></i> State Machine Recipe</h4>
+      <h4 style="color:var(--pink);font-size:.92rem;margin-bottom:.85rem">State Machine Recipe</h4>
       <ol class="recipe-steps">
-        <li><strong>حدد الـ States</strong>: الكائن ممكن يكون فيها (New, Active, Suspended, Closed)</li>
+        <li><strong>حدد الـ States</strong>: الكائن ممكن يكون فيها (New، Active، Suspended، Closed)</li>
         <li><strong>ارسم Initial State ⚫</strong></li>
         <li><strong>ارسم كل State</strong>: مستطيل بزوايا مدورة</li>
         <li><strong>حدد الـ Transitions</strong>: اكتب event/guard على كل سهم</li>
@@ -1036,10 +1013,9 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       </ol>
     </div>
   </div>
-
   <div id="class-tab" class="tab-pane">
     <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
-      <h4 style="color:var(--blue2);font-size:.92rem;margin-bottom:.85rem"><i class="fa-solid fa-table-cells"></i> Class Diagram Recipe</h4>
+      <h4 style="color:var(--blue2);font-size:.92rem;margin-bottom:.85rem">Class Diagram Recipe</h4>
       <ol class="recipe-steps">
         <li><strong>حدد الـ Classes</strong>: من السيناريو — الأسماء هي الـ classes</li>
         <li><strong>حدد Attributes</strong>: الخصائص لكل class مع الـ type والـ visibility</li>
@@ -1048,19 +1024,11 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
         <li><strong>أضف Multiplicity</strong>: 1، 0..1، *، 1..* على الـ associations</li>
         <li><strong>أضف Relationship Names</strong>: اسم في منتصف الخط مع سهم الاتجاه</li>
       </ol>
-      <div class="ex-box" style="margin-top:.9rem"><div class="lbl"><i class="fa-solid fa-pen-ruler"></i> Online Shopping Analysis</div>
-        <strong>Classes:</strong> Customer, WebUser, Account, ShoppingCart, Order, Payment, LineItem, Product<br>
-        <strong>Composition:</strong> Customer ◆→ Account (Account مش بتعيش بدون Customer)<br>
-        <strong>Aggregation:</strong> Account ◇→ ShoppingCart (ShoppingCart ممكن تكون فارغة)<br>
-        <strong>Multiplicity:</strong> Customer 1 ←→ 0..1 WebUser | Account 1 ←→ * Order<br>
-        <strong>Visibility:</strong> Customer.id = {id} يعني unique identifier
-      </div>
     </div>
   </div>
-
   <div id="seq-tab" class="tab-pane">
     <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.25rem">
-      <h4 style="color:var(--purple2);font-size:.92rem;margin-bottom:.85rem"><i class="fa-solid fa-timeline"></i> Sequence Diagram Recipe</h4>
+      <h4 style="color:var(--purple2);font-size:.92rem;margin-bottom:.85rem">Sequence Diagram Recipe</h4>
       <ol class="recipe-steps">
         <li><strong>حدد الـ Actors والـ Objects</strong>: من بيشارك في التفاعل؟ (أفقياً من اليسار لليمين)</li>
         <li><strong>ارسم الـ Lifelines</strong>: مستطيل فوق + خط منقط رأسي لكل participant</li>
@@ -1071,7 +1039,6 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       </ol>
     </div>
   </div>
-
   <div id="smart-tab" class="tab-pane">
     <div style="display:flex;flex-direction:column;gap:.75rem">
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem">
@@ -1082,32 +1049,29 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem">
         <p style="font-size:.84rem;color:var(--text2);margin-bottom:.5rem">🔴 "The system shall have great usability."</p>
         <button class="btn btn-secondary" onclick="toggleAnswer('s2')" style="font-size:.76rem;padding:.28rem .65rem;margin-bottom:.45rem">👁 إظهار التحليل</button>
-        <div id="s2" style="display:none;font-size:.8rem;color:var(--text2)"><span style="color:var(--red2)">❌ Not Measurable</span> — "great usability" مش بتتقاس بأرقام<br>✅ أحسن: "95% من المستخدمين الجدد يكملوا الـ checkout في أول محاولة خلال 5 دقائق"</div>
+        <div id="s2" style="display:none;font-size:.8rem;color:var(--text2)"><span style="color:var(--red2)">❌ Not Measurable</span> — "great usability" مش بتتقاس<br>✅ أحسن: "95% من المستخدمين يكملوا الـ checkout في 5 دقائق"</div>
       </div>
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1rem">
         <p style="font-size:.84rem;color:var(--text2);margin-bottom:.5rem">🔴 "The system shall be 100% reliable and 100% available."</p>
         <button class="btn btn-secondary" onclick="toggleAnswer('s3')" style="font-size:.76rem;padding:.28rem .65rem;margin-bottom:.45rem">👁 إظهار التحليل</button>
-        <div id="s3" style="display:none;font-size:.8rem;color:var(--text2)"><span style="color:var(--red2)">❌ Not Achievable</span> — 100% reliability مستحيل تقنياً<br>✅ أحسن: "99.9% uptime سنوياً مع صيانة مجدولة لا تتجاوز ساعتين شهرياً"</div>
+        <div id="s3" style="display:none;font-size:.8rem;color:var(--text2)"><span style="color:var(--red2)">❌ Not Achievable</span> — 100% reliability مستحيل<br>✅ أحسن: "99.9% uptime سنوياً مع صيانة لا تتجاوز ساعتين شهرياً"</div>
       </div>
     </div>
   </div>
-
   <div id="practice-tab" class="tab-pane">
     <div style="background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.18);border-radius:12px;padding:1.15rem;margin-bottom:.9rem">
       <p style="font-size:.86rem;color:var(--text2)"><strong style="color:var(--text)">Scenario:</strong> Library Management System — الطلاب يستعيروا كتب. المكتبيين يوافقوا أو يرفضوا. النظام يبعت notifications. الإدارة تعمل reports.</p>
     </div>
-    <button class="btn btn-secondary" onclick="toggleAnswer('prac-ans')" style="margin-bottom:.85rem"><i class="fa-solid fa-eye me-1"></i> إظهار الإجابة الكاملة</button>
+    <button class="btn btn-secondary" onclick="toggleAnswer('prac-ans')" style="margin-bottom:.85rem"><i class="fa-solid fa-eye"></i> إظهار الإجابة الكاملة</button>
     <div id="prac-ans" style="display:none">
       <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.15rem">
         <div style="display:flex;flex-direction:column;gap:.65rem">
-          <div class="lab-step"><div class="step-num">A</div><div class="step-content"><strong>Actors:</strong> Student, Librarian, Admin, Email System</div></div>
+          <div class="lab-step"><div class="step-num">A</div><div class="step-content"><strong>Actors:</strong> Student، Librarian، Admin، Email System</div></div>
           <div class="lab-step"><div class="step-num">UC</div><div class="step-content"><strong>Use Cases:</strong> Borrow Book، Return Book، Search Catalog، Approve Request، Generate Report، Send Notification</div></div>
           <div class="lab-step"><div class="step-num">I</div><div class="step-content"><strong>«include»:</strong> "Borrow Book" «include» "Check Availability" | "Approve Request" «include» "Send Notification"</div></div>
           <div class="lab-step"><div class="step-num">E</div><div class="step-content"><strong>«extend»:</strong> "Send Overdue Reminder" «extend» "Return Book"</div></div>
-          <div class="lab-step"><div class="step-num">CL</div><div class="step-content"><strong>Classes:</strong> Student, Book, BorrowRecord, Librarian, Notification<br>
-            Composition: BorrowRecord ◆→ Book (Record مش بتعيش بدون Book)<br>
-            Multiplicity: Student 1 ←→ * BorrowRecord | Book 1 ←→ * BorrowRecord</div></div>
-          <div class="lab-step"><div class="step-num">M</div><div class="step-content"><strong>MoSCoW:</strong> Must: Borrow/Return, Catalog Search | Should: Notifications | Could: Mobile app | Won't: Payroll integration</div></div>
+          <div class="lab-step"><div class="step-num">CL</div><div class="step-content"><strong>Classes:</strong> Student، Book، BorrowRecord، Librarian، Notification<br>Composition: BorrowRecord ◆→ Book | Multiplicity: Student 1 ←→ * BorrowRecord</div></div>
+          <div class="lab-step"><div class="step-num">M</div><div class="step-content"><strong>MoSCoW:</strong> Must: Borrow/Return، Catalog Search | Should: Notifications | Could: Mobile app | Won't: Payroll integration</div></div>
         </div>
       </div>
     </div>
@@ -1116,46 +1080,48 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 
 <hr class="divider">
 
-<!-- ======= T/F ======= -->
+<!-- T/F -->
 <div class="section reveal" id="tf">
   <h2 class="sec-title"><i class="fa-solid fa-check-double" style="color:var(--blue2)"></i> <span class="hi">True / False</span></h2>
-  <p class="sec-sub">الجمل بالإنجليزي، الشرح بالعربي</p>
+  <p class="sec-sub">الأسئلة بالإنجليزي، الشرح بالعربي</p>
   <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.15rem;align-items:center">
     <button class="filter-btn active" onclick="filterTF('all',this)">الكل</button>
     <button class="filter-btn" onclick="filterTF('se',this)">SE</button>
+    <button class="filter-btn" onclick="filterTF('proc',this)">SW Process</button>
     <button class="filter-btn" onclick="filterTF('req',this)">Requirements</button>
     <button class="filter-btn" onclick="filterTF('srs',this)">SRS & V&V</button>
     <button class="filter-btn" onclick="filterTF('uml',this)">UML</button>
     <button class="filter-btn" onclick="filterTF('class',this)">Class Diagram</button>
     <button class="filter-btn" onclick="filterTF('seq',this)">Sequence</button>
-    <button class="btn btn-secondary" onclick="toggleAllTF()" style="padding:.28rem .75rem;font-size:.75rem"><i class="fa-solid fa-eye me-1"></i> إظهار / إخفاء الكل</button>
+    <button class="btn btn-secondary" onclick="toggleAllTF()" style="padding:.28rem .75rem;font-size:.75rem"><i class="fa-solid fa-eye"></i> إظهار / إخفاء الكل</button>
   </div>
   <div id="tf-list" style="display:flex;flex-direction:column;gap:.65rem"></div>
 </div>
 
 <hr class="divider">
 
-<!-- ======= MCQ ======= -->
+<!-- MCQ -->
 <div class="section reveal" id="mcq">
   <h2 class="sec-title"><i class="fa-solid fa-list-check" style="color:var(--blue2)"></i> <span class="hi">MCQ Practice</span></h2>
   <p class="sec-sub">اختار الإجابة وهتظهرلك التصحيح فوراً</p>
   <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.15rem;align-items:center">
     <button class="filter-btn active" onclick="filterMCQ('all',this)">الكل</button>
     <button class="filter-btn" onclick="filterMCQ('se',this)">SE</button>
+    <button class="filter-btn" onclick="filterMCQ('proc',this)">SW Process</button>
     <button class="filter-btn" onclick="filterMCQ('req',this)">Requirements</button>
     <button class="filter-btn" onclick="filterMCQ('srs',this)">SRS & V&V</button>
     <button class="filter-btn" onclick="filterMCQ('uml',this)">UML</button>
     <button class="filter-btn" onclick="filterMCQ('class',this)">Class Diagram</button>
     <button class="filter-btn" onclick="filterMCQ('seq',this)">Sequence</button>
     <div class="score-box"><i class="fa-solid fa-star" style="color:var(--yellow2)"></i> Score: <span id="score">0</span> / <span id="total-q">0</span></div>
-    <button class="btn btn-secondary" onclick="resetMCQ()" style="padding:.28rem .75rem;font-size:.75rem"><i class="fa-solid fa-rotate-right me-1"></i> Reset</button>
+    <button class="btn btn-secondary" onclick="resetMCQ()" style="padding:.28rem .75rem;font-size:.75rem"><i class="fa-solid fa-rotate-right"></i> Reset</button>
   </div>
   <div id="mcq-list"></div>
 </div>
 
 <hr class="divider">
 
-<!-- ======= ESSAY ======= -->
+<!-- ESSAY -->
 <div class="section reveal" id="essay">
   <h2 class="sec-title"><i class="fa-solid fa-pen" style="color:var(--blue2)"></i> <span class="hi">Essay Questions</span></h2>
   <p class="sec-sub">اضغط لتشوف الإجابة النموذجية</p>
@@ -1164,7 +1130,7 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 
 <hr class="divider">
 
-<!-- ======= TRAPS ======= -->
+<!-- TRAPS -->
 <div class="section reveal" id="traps">
   <h2 class="sec-title"><i class="fa-solid fa-triangle-exclamation" style="color:var(--red2)"></i> <span class="hi">Exam Traps</span></h2>
   <p class="sec-sub">الحاجات دي بتخبط الناس — اقرأها كويس</p>
@@ -1173,18 +1139,19 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 
 <hr class="divider">
 
-<!-- ======= SUMMARY ======= -->
+<!-- SUMMARY -->
 <div class="section reveal" id="summary">
   <h2 class="sec-title"><i class="fa-solid fa-moon" style="color:var(--blue2)"></i> <span class="hi">ليلة الامتحان</span></h2>
   <p class="sec-sub">لو مش هتذاكر غير حاجة واحدة — الـ section ده هو اللي هيفرق</p>
   <div class="summary-grid">
     <div class="summary-card"><h4><i class="fa-solid fa-bookmark"></i> تعريفات أساسية</h4>
       <ul class="clist" style="font-size:.78rem">
-        <li><strong>SE</strong>: تطبيق مبادئ هندسية منهجية</li>
+        <li><strong>SE</strong>: systematic engineering principles for software</li>
         <li><strong>SRS</strong>: وثيقة المتطلبات الرسمية</li>
         <li><strong>UML</strong>: لغة نمذجة بصرية (مش لغة برمجة!)</li>
         <li><strong>Sign-off</strong>: موافقة stakeholders على المتطلبات</li>
         <li><strong>RTM</strong>: تتبع العلاقات بين المتطلبات والـ artifacts</li>
+        <li><strong>Regression Testing</strong>: اختبار على previous test cases بعد maintenance</li>
       </ul>
     </div>
     <div class="summary-card"><h4><i class="fa-solid fa-bolt"></i> مقارنات سريعة</h4>
@@ -1194,6 +1161,32 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
         <li><strong>Verif</strong>=right way? | <strong>Valid</strong>=right thing?</li>
         <li><strong>Include</strong>=إلزامي | <strong>Extend</strong>=اختياري</li>
         <li><strong>Aggregation</strong>=◇ | <strong>Composition</strong>=◆</li>
+      </ul>
+    </div>
+    <div class="summary-card"><h4><i class="fa-solid fa-gears"></i> SW Process Phases</h4>
+      <ul class="clist" style="font-size:.78rem">
+        <li>Requirements → Specification → Design</li>
+        <li>Implementation + Integration (parallel)</li>
+        <li>Maintenance (67% of cost!) → Retirement</li>
+        <li>Testing + Documentation = في كل مرحلة</li>
+        <li>Alpha version → Beta version</li>
+      </ul>
+    </div>
+    <div class="summary-card"><h4><i class="fa-solid fa-chart-simple"></i> CMM Levels</h4>
+      <ul class="clist" style="font-size:.78rem">
+        <li><strong>1</strong> Initial: ad hoc، chaotic</li>
+        <li><strong>2</strong> Repeatable: basic PM</li>
+        <li><strong>3</strong> Defined: documented، CASE</li>
+        <li><strong>4</strong> Managed: statistical control</li>
+        <li><strong>5</strong> Optimizing: continuous improvement</li>
+      </ul>
+    </div>
+    <div class="summary-card"><h4><i class="fa-solid fa-wrench"></i> Maintenance Types</h4>
+      <ul class="clist" style="font-size:.78rem">
+        <li><strong>Adaptive</strong>: environment changes (OS/DBMS)</li>
+        <li><strong>Perfective</strong>: new/changed requirements</li>
+        <li><strong>Corrective</strong>: fix user-found errors</li>
+        <li><strong>Preventive</strong>: increase future maintainability</li>
       </ul>
     </div>
     <div class="summary-card"><h4><i class="fa-solid fa-eye"></i> Class Visibility</h4>
@@ -1206,45 +1199,28 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
     </div>
     <div class="summary-card"><h4><i class="fa-solid fa-link"></i> Class Relations</h4>
       <ul class="clist" style="font-size:.78rem">
-        <li><strong>Inheritance</strong>: is-a | solid + hollow arrowhead</li>
-        <li><strong>Association</strong>: solid line بسيط</li>
-        <li><strong>Aggregation ◇</strong>: part-of، lifetimes مستقلة</li>
-        <li><strong>Composition ◆</strong>: part-of، parts بتموت مع whole</li>
+        <li><strong>Inheritance</strong>: is-a | hollow arrowhead</li>
+        <li><strong>Association</strong>: solid plain line</li>
+        <li><strong>Aggregation ◇</strong>: part-of، separate lifetimes</li>
+        <li><strong>Composition ◆</strong>: part-of، parts die with whole</li>
       </ul>
     </div>
     <div class="summary-card"><h4><i class="fa-solid fa-timeline"></i> Sequence Diagram</h4>
       <ul class="clist" style="font-size:.78rem">
         <li>Lifeline = مستطيل + خط منقط رأسي</li>
-        <li>Activation = مستطيل رفيع على الـ lifeline</li>
-        <li>Call = خط صلب → | Return = خط منقط ←</li>
-        <li>alt = if/else | loop = تكرار | opt = اختياري</li>
+        <li>Call = solid → | Return = dashed ←</li>
+        <li>alt=if/else | loop=تكرار | opt=اختياري</li>
         <li>Time axis = رأسي هبوطاً</li>
-      </ul>
-    </div>
-    <div class="summary-card"><h4><i class="fa-solid fa-folder"></i> Package Diagram</h4>
-      <ul class="clist" style="font-size:.78rem">
-        <li>Package = file folder (مستطيل بزاوية صغيرة)</li>
-        <li>Dependency = خط منقط + سهم</li>
-        <li>«import» = يستورد functionality كاملة</li>
-        <li>«access» = يحتاج مساعدة منها</li>
-        <li>Package names فريدة في النظام</li>
+        <li>Fragment operator في الركن العلوي الأيسر</li>
       </ul>
     </div>
     <div class="summary-card"><h4><i class="fa-solid fa-bullseye"></i> SMART</h4>
       <ul class="clist" style="font-size:.78rem">
-        <li><strong>S</strong>pecific — بلا غموض</li>
-        <li><strong>M</strong>easurable — فيه رقم</li>
-        <li><strong>A</strong>chievable — ممكن تنفيذه</li>
-        <li><strong>R</strong>elevant — في حدود الموارد</li>
-        <li><strong>T</strong>ime — فيه deadline</li>
-      </ul>
-    </div>
-    <div class="summary-card"><h4><i class="fa-solid fa-sort-amount-down"></i> MoSCoW</h4>
-      <ul class="clist" style="font-size:.78rem">
-        <li><strong>M</strong>ust = ضروري، بدونه فشل (60%)</li>
-        <li><strong>S</strong>hould = مهم لكن ليس ضروري (80%)</li>
-        <li><strong>C</strong>ould = Nice to have</li>
-        <li><strong>W</strong>on't = next release</li>
+        <li><strong>S</strong>pecific — no ambiguity</li>
+        <li><strong>M</strong>easurable — has a number</li>
+        <li><strong>A</strong>chievable — within human knowledge</li>
+        <li><strong>R</strong>elevant — within resources</li>
+        <li><strong>T</strong>ime — has deadline/milestones</li>
       </ul>
     </div>
   </div>
@@ -1254,9 +1230,9 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
   <div style="font-family:'Tajawal',sans-serif;font-size:1.4rem;font-weight:900;background:linear-gradient(135deg,var(--blue2),var(--teal2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.45rem">لو وصلت لهنا... لمّيت الدنيا <i class="fa-solid fa-fire" style="color:var(--orange)"></i></div>
   <p style="color:var(--text2);margin:.45rem 0 1.15rem;font-size:.85rem">روح نام، صحي بكره وإنت مؤمن إنك ذاكرت كويس ✨</p>
   <div style="display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;margin-bottom:.8rem">
-    <span class="chip chip-blue">SE</span><span class="chip chip-green">Requirements</span><span class="chip chip-yellow">SMART</span><span class="chip chip-red">MoSCoW</span><span class="chip chip-purple">SRS & V&V</span><span class="chip chip-teal">UML</span><span class="chip chip-blue">Use Case</span><span class="chip chip-green">Activity</span><span class="chip chip-pink">State Machine</span><span class="chip chip-yellow">Class Diagram</span><span class="chip chip-purple">Sequence</span><span class="chip chip-teal">Package</span>
+    <span class="chip chip-blue">SE</span><span class="chip chip-green">SW Process</span><span class="chip chip-yellow">CMM</span><span class="chip chip-red">Requirements</span><span class="chip chip-purple">SRS & V&V</span><span class="chip chip-teal">RTM</span><span class="chip chip-blue">Use Case</span><span class="chip chip-green">Activity</span><span class="chip chip-pink">State Machine</span><span class="chip chip-yellow">Class Diagram</span><span class="chip chip-purple">Sequence</span><span class="chip chip-teal">Package</span>
   </div>
-  <p style="color:var(--text3);font-size:.73rem">SE Final Rescue 2026 — Updated from Lectures 3–6 💙</p>
+  <p style="color:var(--text3);font-size:.73rem">SE Final Rescue 2026 — Updated from Lectures 2–6 + PDF Review 💙</p>
 </footer>
 
 <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fa-solid fa-arrow-up"></i></button>
@@ -1264,186 +1240,185 @@ ul.clist li::before{content:"←";position:absolute;right:0;color:var(--blue);fo
 <script>
 // ===== DATA =====
 const tfData=[
-  {s:"Software Engineering is only about writing code.",ans:false,ex:"SE هي تطبيق مبادئ هندسية منهجية تشمل التحليل والتصميم والاختبار والتوثيق — مش بس الكود.",cat:"se"},
-  {s:"A Fault is caused by an Error.",ans:true,ex:"Error (الغلطة البشرية) → Fault (الكود الغلط) → Failure (الفشل الفعلي للمستخدم).",cat:"se"},
-  {s:"Testing is a phase that only occurs at the end of the Software Process.",ans:false,ex:"Testing و Documentation بيحصلوا في كل مراحل الـ Software Process.",cat:"se"},
-  {s:"Non-functional requirements must be measurable using clear, objective criteria.",ans:true,ex:"ده أهم خاصية للـ Non-Functional — بدون أرقام مش مقبول.",cat:"req"},
-  {s:"'The system should be fast' is a valid non-functional requirement.",ans:false,ex:"مش measurable. الصح: 'النظام يرد في أقل من 2 ثانية لـ 95% من الطلبات'.",cat:"req"},
+  // SE
+  {s:"Software Engineering is only about writing code.",ans:false,ex:"SE هي تطبيق مبادئ هندسية منهجية تشمل التحليل والتصميم والاختبار والتوثيق — Software = Programs + Data + Documents.",cat:"se"},
+  {s:"A Fault is caused by an Error.",ans:true,ex:"الترتيب: Error (الغلطة البشرية) → Fault (الكود الغلط) → Failure (الفشل الفعلي للمستخدم).",cat:"se"},
+  {s:"The term 'Software Engineering' was first suggested at NATO conferences in 1968 and 1969.",ans:true,ex:"ده بالحرف من المحاضرة — بسبب الـ Software Crisis.",cat:"se"},
+  // SW PROCESS
+  {s:"Testing is a phase that only occurs at the end of the Software Process.",ans:false,ex:"Testing و Documentation بيحصلوا في كل مراحل الـ Software Process — مش بس في النهاية.",cat:"proc"},
+  {s:"The Integration Phase is performed in parallel with the Implementation Phase.",ans:true,ex:"من المحاضرة: 'Integration Phase (in parallel with phase 4)' — بيحصلوا في نفس الوقت.",cat:"proc"},
+  {s:"Maintenance constitutes approximately 67% of the total software project cost.",ans:true,ex:"ده من المحاضرة: 'Maintenance constitutes 67% of total cost' — أكبر بند في الميزانية.",cat:"proc"},
+  {s:"A Beta version is the original software released to selected users before corrections.",ans:false,ex:"Alpha هي اللي بتتبعت لـ selected users أول مرة. Beta هي الـ corrected alpha version.",cat:"proc"},
+  {s:"Corrective maintenance involves modifying the system to cope with changes in the software environment.",ans:false,ex:"Corrective = fix errors found by users. اللي بيتعامل مع environment changes = Adaptive maintenance.",cat:"proc"},
+  {s:"Regression testing ensures that fixing one part of the software does not break other existing functionality.",ans:true,ex:"'The product must be tested against previous test cases to make certain that the functionality of the rest of the product has not been compromised.'",cat:"proc"},
+  {s:"In SW-CMM Level 1, the software process is fully documented and standardized.",ans:false,ex:"Level 3 (Defined) هو اللي فيه الـ process fully documented. Level 1 = ad hoc وchaotic.",cat:"proc"},
+  {s:"CASE environments are applicable starting from CMM Level 3.",ans:true,ex:"من المحاضرة: 'CASE environments are applicable (not at levels 1 or 2)' — بيبدأوا من Level 3.",cat:"proc"},
+  // REQUIREMENTS
+  {s:"Non-functional requirements must be measurable using clear, objective criteria.",ans:true,ex:"ده أهم خاصية للـ Non-Functional — بدون أرقام مش مقبول في الامتحان.",cat:"req"},
+  {s:"'The system should be fast' is a valid non-functional requirement.",ans:false,ex:"مش measurable. الصح: 'The system must process requests within 2 seconds for 95% of all requests'.",cat:"req"},
   {s:"Functional requirements describe HOW WELL the system performs.",ans:false,ex:"Functional = WHAT يعمله النظام. Non-Functional = HOW WELL.",cat:"req"},
-  {s:"Prototyping allows you to verify the design is what people need while there is still time to change it.",ans:true,ex:"ده بالظبط الـ main benefit من الـ Prototyping.",cat:"req"},
+  {s:"Prototyping allows you to verify the design while there is still time to change it.",ans:true,ex:"Benefit of Prototyping من المحاضرة بالحرف.",cat:"req"},
+  {s:"In a requirements workshop, involving too many participants can slow down the process.",ans:true,ex:"من المحاضرة: 'Do not involve too many participants → slow down the workshop process'.",cat:"req"},
+  {s:"The Observation technique's effectiveness is NOT affected by the fact that users are being watched.",ans:false,ex:"من المحاضرة: 'users have a tendency to adjust the way they perform tasks when knowingly being watched.'",cat:"req"},
+  {s:"Fixed format surveys allow respondents to give their own answers freely.",ans:false,ex:"Fixed format = predefined answers only. Free format = open response. الاثنين معكوسين!",cat:"req"},
+  // SRS & V&V
   {s:"The SRS is developed based on the agreement between customer and contractors.",ans:true,ex:"ده بالحرف من المحاضرة.",cat:"srs"},
   {s:"System Test Engineers use the SRS to plan a bid for the system.",ans:false,ex:"Managers هم اللي بيستخدموا الـ SRS for planning bids. Test Engineers بيستخدموها to develop validation tests.",cat:"srs"},
   {s:"Verification answers the question 'Are we building the right thing?'",ans:false,ex:"Verification = 'Are we building the thing right?' (مطابق للـ specs). Validation = 'Are we building the right thing?'",cat:"srs"},
   {s:"Sign-off means the developer has finished coding the system.",ans:false,ex:"Sign-off = موافقة الـ stakeholders على المتطلبات الموثقة — مش إنهاء الكود.",cat:"srs"},
   {s:"A 'Should Have' requirement in MoSCoW means the project fails without it.",ans:false,ex:"Must Have هو اللي بيفشل المشروع بدونه. Should Have = important but project still viable.",cat:"srs"},
-  {s:"UML is a programming language used to implement software systems.",ans:false,ex:"UML = Unified Modeling Language — لغة نمذجة بصرية للتصميم. مفيش runtime.",cat:"uml"},
-  {s:"Use Case Diagram is a type of Structure Diagram in UML.",ans:false,ex:"Use Case هو Behavior Diagram. Structure = Class, Package, Component, Deployment.",cat:"uml"},
-  {s:"«include» relationship means the included use case is always executed when the base use case runs.",ans:true,ex:"Include = استدعاء إلزامي دايماً. مثال: Withdraw Money يستدعي دايماً Verify PIN.",cat:"uml"},
+  {s:"One benefit of RTM is that it helps avoid scope creep by associating requirements with business objectives.",ans:true,ex:"من المحاضرة: RTM benefit (1) 'Management of the solution scope' → evaluate value، prioritize، avoid scope creep.",cat:"srs"},
+  {s:"RTM can help identify when two different terms in requirements refer to the same entity.",ans:true,ex:"RTM benefit (4): 'Promotes consistency — if we use two different terms to refer to the same entity, connecting requirements may help us see the inconsistency.'",cat:"srs"},
+  // UML
+  {s:"UML is a programming language used to implement software systems.",ans:false,ex:"UML = Unified Modeling Language — لغة نمذجة بصرية للتصميم. مفيش runtime أو تنفيذ.",cat:"uml"},
+  {s:"Use Case Diagram is a type of Structure Diagram in UML.",ans:false,ex:"Use Case هو Behaviour Diagram. Structure = Class، Package، Component، Deployment.",cat:"uml"},
+  {s:"«include» relationship means the included use case is always executed when the base use case runs.",ans:true,ex:"Include = mandatory execution دايماً. مثال: Withdraw Money يستدعي دايماً Verify PIN.",cat:"uml"},
   {s:"In a Use Case Diagram, actors must be placed inside the System Boundary rectangle.",ans:false,ex:"Actors دايماً بره الـ System Boundary. Use Cases جوا.",cat:"uml"},
   {s:"The «extend» arrow goes FROM the Base use case TO the Extension.",ans:false,ex:"الاتجاه الصح: من الـ Extension → إلى الـ Base.",cat:"uml"},
   {s:"A Fork node in an Activity Diagram splits a single flow into multiple concurrent flows.",ans:true,ex:"Fork = يقسم flow واحد لـ concurrent flows متعددة. Join = يجمعهم تاني.",cat:"uml"},
-  {s:"In a swimlane Activity Diagram, the start point should be placed in the top-right corner of the first column.",ans:false,ex:"المحاضرة بتقول: 'make sure the start point is placed in the top LEFT corner of the first column.'",cat:"uml"},
-  // CLASS DIAGRAM
-  {s:"In a UML Class Diagram, the '+' symbol before an attribute denotes private visibility.",ans:false,ex:"+ = public. - = private. # = protected. ~ = package. كتير بيعكسوا + و -!",cat:"class"},
-  {s:"Composition is a special type of aggregation where parts are destroyed when the whole is destroyed.",ans:true,ex:"ده بالحرف من المحاضرة. Parts في Composition 'live and die with Class1'.",cat:"class"},
+  {s:"In a swimlane Activity Diagram, the start point should be placed in the top-right corner.",ans:false,ex:"من المحاضرة: 'make sure the start point is placed in the top LEFT corner of the first column.'",cat:"uml"},
+  // CLASS
+  {s:"In a UML Class Diagram, the '+' symbol before an attribute denotes private visibility.",ans:false,ex:"+ = public. - = private. # = protected. ~ = package. ده أكثر خطأ في الامتحانات!",cat:"class"},
+  {s:"Composition is a special type of aggregation where parts are destroyed when the whole is destroyed.",ans:true,ex:"'Objects of Class2 live and die with Class1' — ده تعريف Composition من المحاضرة.",cat:"class"},
   {s:"In Aggregation, objects of the part class have separate lifetimes from the whole class.",ans:true,ex:"'Objects of Class1 and Class2 have separate lifetimes' — ده بيفرق Aggregation عن Composition.",cat:"class"},
   {s:"A protected (#) attribute can be accessed by members of derived classes.",ans:true,ex:"Protected = accessible by same class + derived classes. لكن مش by any other class.",cat:"class"},
   {s:"In a Class Diagram, inheritance is shown by a solid line with a FILLED arrowhead pointing to the parent.",ans:false,ex:"Inheritance = solid line with HOLLOW (unfilled) arrowhead pointing to the parent class.",cat:"class"},
   {s:"Two classes in different packages cannot have the same name in a system.",ans:false,ex:"من المحاضرة: 'package name should not be the same for a system, however classes inside different packages could have the same name.'",cat:"class"},
   {s:"In a Package Diagram, dotted arrows represent dependencies between packages.",ans:true,ex:"ده بالحرف من المحاضرة — 'The dotted arrows are dependencies.'",cat:"class"},
-  {s:"«import» in a package diagram means one package requires help from functions of another package.",ans:false,ex:"«import» = one package imports the functionality. «access» = one package requires help from functions.",cat:"class"},
-  // SEQUENCE DIAGRAM
-  {s:"In a Sequence Diagram, the vertical axis represents time progressing downward.",ans:true,ex:"'The vertical axis represents time proceedings (or progressing) down the page.' ده من المحاضرة.",cat:"seq"},
-  {s:"A Return Message in a Sequence Diagram is represented by a solid line with an arrowhead.",ans:false,ex:"Return Message = خط منقط (dashed line) بسهم. Call Message هو اللي بيكون solid line.",cat:"seq"},
-  {s:"A Lifeline in a Sequence Diagram represents all participants collectively in an interaction.",ans:false,ex:"'A lifeline represents an individual participant in the Interaction' — واحد بواحد مش كلهم.",cat:"seq"},
+  {s:"«import» in a package diagram means one package requires help from functions of another package.",ans:false,ex:"«import» = imports the functionality. «access» = requires help from functions. الاثنين معكوسين!",cat:"class"},
+  // SEQUENCE
+  {s:"In a Sequence Diagram, the vertical axis represents time progressing downward.",ans:true,ex:"'The vertical axis represents time proceedings down the page.' — ده من المحاضرة.",cat:"seq"},
+  {s:"A Return Message in a Sequence Diagram is represented by a solid line with an arrowhead.",ans:false,ex:"Return Message = خط منقط (dashed line). Call Message هو اللي بيكون solid line.",cat:"seq"},
+  {s:"A Lifeline in a Sequence Diagram represents all participants collectively in an interaction.",ans:false,ex:"'A lifeline represents an individual participant in the Interaction' — واحد مش كلهم.",cat:"seq"},
   {s:"The 'opt' combined fragment in a Sequence Diagram is equivalent to an 'alt' with only one trace.",ans:true,ex:"ده بالحرف من المحاضرة: 'Equivalent to an alt only with one trace.'",cat:"seq"},
-  {s:"In a Sequence Diagram, the 'alt' fragment executes ALL alternative fragments regardless of conditions.",ans:false,ex:"'Only the one whose condition is true will execute' — مش كلهم.",cat:"seq"},
+  {s:"In a Sequence Diagram, the 'alt' fragment executes ALL alternative traces.",ans:false,ex:"'Only the one whose condition is true will execute' — مش كلهم.",cat:"seq"},
   {s:"An Activation bar on a lifeline represents the period during which an element is performing an operation.",ans:true,ex:"'A thin rectangle on a lifeline represents the period during which an element is performing an operation.'",cat:"seq"},
 ];
 
 const mcqData=[
+  // SE
   {q:"Which sequence correctly describes: developer forgets null check → code has wrong condition → user sees crash?",opts:["Failure → Error → Fault","Fault → Failure → Error","Error → Fault → Failure","Error → Failure → Fault"],ans:2,ex:"الترتيب: Error (نسيان المبرمج) → Fault (الكود الغلط) → Failure (الـ app بيقفل).",cat:"se"},
-  {q:"'The system must process cash withdrawal within 5 seconds of bank approval.' This is an example of:",opts:["Functional Requirement","Non-Functional Requirement","Design Specification","User Story"],ans:1,ex:"Non-Functional Requirement — performance requirement وهو measurable بأرقام.",cat:"req"},
+  {q:"According to the lecture, software consists of which THREE components?",opts:["Code، Design، Testing","Programs، Data structures، Documents","Requirements، Design، Code","Algorithms، Data، Testing"],ans:1,ex:"'Software is a set of items that form a configuration that includes Programs، Data structures، Documents.'",cat:"se"},
+  // SW PROCESS
+  {q:"Which maintenance type involves modifying the system to cope with changes in the operating system or DBMS?",opts:["Corrective","Perfective","Adaptive","Preventive"],ans:2,ex:"Adaptive = modifying to cope with changes in the software environment (DBMS، OS).",cat:"proc"},
+  {q:"Which maintenance type involves implementing NEW user requirements as functional enhancements?",opts:["Adaptive","Perfective","Corrective","Preventive"],ans:1,ex:"Perfective = 'implementing new or changed user requirements which concern functional enhancements.'",cat:"proc"},
+  {q:"What is the approximate percentage of total cost that the Maintenance phase represents?",opts:["25%","45%","67%","80%"],ans:2,ex:"من المحاضرة: 'Maintenance constitutes 67% of total cost.'",cat:"proc"},
+  {q:"A corrected alpha version of software is called:",opts:["Release version","Stable version","Beta version","Gold version"],ans:2,ex:"'Corrected alpha version is called beta version' — من المحاضرة.",cat:"proc"},
+  {q:"Which testing type must be performed after any maintenance change to ensure existing functionality is not broken?",opts:["Unit testing","Integration testing","Acceptance testing","Regression testing"],ans:3,ex:"Regression testing = 'testing against previous test cases to make certain that functionality has not been compromised.'",cat:"proc"},
+  {q:"In SW-CMM, which level is characterized by 'ad hoc and occasionally chaotic' process?",opts:["Level 2 — Repeatable","Level 1 — Initial","Level 3 — Defined","Level 5 — Optimizing"],ans:1,ex:"Level 1 (Initial) = ad hoc، chaotic، depends totally on current staff، management = crisis response.",cat:"proc"},
+  {q:"Starting from which SW-CMM level are CASE environments applicable?",opts:["Level 1","Level 2","Level 3","Level 4"],ans:2,ex:"من المحاضرة: 'CASE environments are applicable (not at levels 1 or 2)' — أي Level 3 فصاعداً.",cat:"proc"},
+  {q:"Which SW-CMM level focuses on CONTINUOUS PROCESS IMPROVEMENT using statistical controls?",opts:["Level 3 — Defined","Level 4 — Managed","Level 5 — Optimizing","Level 2 — Repeatable"],ans:2,ex:"Level 5 (Optimizing) = continuous process improvement، statistical quality and process controls.",cat:"proc"},
+  {q:"The Specification document must NOT be which of the following?",opts:["Detailed","Precise","Ambiguous","Functional"],ans:2,ex:"Specifications must not be: Ambiguous، Incomplete، or Contradictory — ambiguous means open to more than one interpretation.",cat:"proc"},
+  // REQUIREMENTS
+  {q:"'The system must process cash withdrawal within 5 seconds of bank approval.' This is an example of:",opts:["Functional Requirement","Non-Functional Requirement","Design Specification","User Story"],ans:1,ex:"Non-Functional Requirement — performance requirement مع رقم قابل للقياس.",cat:"req"},
   {q:"Who uses the SRS to 'develop validation tests for the system'?",opts:["System Customers","Managers","System Engineers","System Test Engineers"],ans:3,ex:"System Test Engineers بيستخدموا الـ SRS عشان يبنوا validation tests.",cat:"srs"},
-  {q:"Verification is BEST described as:",opts:["Testing that users accept the final product","Checking the product against design specifications","Running black box tests only","Ensuring the product meets the real business need"],ans:1,ex:"Verification = checking against design specs (building it right?). Validation = meets real business need.",cat:"srs"},
-  {q:"Which SMART criterion is violated by: 'The system shall be 100% reliable'?",opts:["Specific","Measurable","Achievable","Relevant"],ans:2,ex:"Achievable — 100% reliability مستحيل تقنياً.",cat:"srs"},
-  {q:"Which UML diagram type includes Use Case, Activity, and State Machine diagrams?",opts:["Structure Diagrams","Interaction Diagrams","Behaviour Diagrams","Component Diagrams"],ans:2,ex:"Use Case, Activity, State Machine كلهم Behaviour Diagrams.",cat:"uml"},
-  {q:"In a Use Case Diagram, where should Actors be placed?",opts:["Inside the System Boundary","On top of Use Cases","Outside the System Boundary","Inside Use Case ovals"],ans:2,ex:"Actors دايماً بره الـ System Boundary.",cat:"uml"},
+  {q:"Which SMART criterion is violated by: 'The system shall be 100% reliable'?",opts:["Specific","Measurable","Achievable","Relevant"],ans:2,ex:"Achievable — 100% reliability مستحيل تقنياً. 'The consequence is that the system will never be accepted or prohibitively expensive.'",cat:"srs"},
+  {q:"Which SMART criterion is violated by: 'Implement Oracle Applications in 1 month'?",opts:["Specific","Measurable","Achievable","Relevant"],ans:3,ex:"Relevant — 'Any ERP project takes significant planning. No ERP implementation is less than 3 months.'",cat:"srs"},
+  {q:"In requirements elicitation، which step involves establishing objectives، specific participants، and an agenda?",opts:["Step 1: Choose approach","Step 2: Elicitation Preparation","Step 3: Conduct the Elicitation","Step 4: Analyze Results"],ans:1,ex:"Step 2: Elicitation Preparation = establish objective، specific participants، resources، questions، agenda with start/end times.",cat:"req"},
+  {q:"Which difficulty of requirements elicitation involves users adjusting their behavior when they know they are being watched?",opts:["Communication barriers","Articulation problems","Technical issues","Human behavior issues"],ans:3,ex:"Human behavior issues = expectation/fear of changes. وبالنسبة للـ observation: 'users have a tendency to adjust the way they perform tasks when knowingly being watched.'",cat:"req"},
+  // SRS & V&V
+  {q:"Verification is BEST described as:",opts:["Testing that users accept the final product","Checking the product against design specifications","Running black box tests only","Ensuring the product meets the real business need"],ans:1,ex:"Verification = 'evaluating intermediary work products to check if we are on the right track' — checking against specs.",cat:"srs"},
+  {q:"Which UML diagram type includes Use Case، Activity، and State Machine diagrams?",opts:["Structure Diagrams","Interaction Diagrams","Behaviour Diagrams","Component Diagrams"],ans:2,ex:"Use Case، Activity، State Machine كلهم Behaviour Diagrams.",cat:"uml"},
+  {q:"In a Use Case Diagram، where should Actors be placed?",opts:["Inside the System Boundary","On top of Use Cases","Outside the System Boundary","Inside Use Case ovals"],ans:2,ex:"Actors دايماً بره الـ System Boundary.",cat:"uml"},
   {q:"'Print Receipt' is optional and only occurs sometimes after 'Withdraw Cash'. What relationship should be used?",opts:["«include»","Generalization","«extend»","Association"],ans:2,ex:"«extend» للسلوك الاختياري. اتجاه السهم: من Extension → إلى Base.",cat:"uml"},
-  // CLASS DIAGRAM
+  // CLASS
   {q:"Which symbol in a UML Class Diagram represents a PRIVATE attribute?",opts:["+","-","#","~"],ans:1,ex:"- = private. + = public. # = protected. ~ = package.",cat:"class"},
-  {q:"In a UML Class Diagram, Composition is represented by:",opts:["Solid line with hollow arrowhead","Solid line with filled diamond","Solid line with unfilled diamond","Dotted line with arrowhead"],ans:1,ex:"Composition = solid line with FILLED diamond (◆) at the whole class end.",cat:"class"},
-  {q:"What is the key difference between Aggregation and Composition?",opts:["Aggregation uses filled diamond, Composition uses hollow","In Composition, parts can exist independently","In Aggregation, parts are destroyed when the whole is destroyed","In Composition, parts are destroyed when the whole is destroyed"],ans:3,ex:"Composition: 'parts are destroyed when the whole is destroyed. Objects of Class2 live and die with Class1.'",cat:"class"},
+  {q:"In a UML Class Diagram، Composition is represented by:",opts:["Solid line with hollow arrowhead","Solid line with filled diamond","Solid line with unfilled diamond","Dotted line with arrowhead"],ans:1,ex:"Composition = solid line with FILLED diamond (◆) at the whole class end.",cat:"class"},
+  {q:"What is the key difference between Aggregation and Composition?",opts:["Aggregation uses filled diamond","In Composition، parts can exist independently","Aggregation uses unfilled diamond، parts have separate lifetimes","In Aggregation، parts are destroyed with the whole"],ans:2,ex:"Aggregation ◇ = separate lifetimes. Composition ◆ = 'parts are destroyed when the whole is destroyed.'",cat:"class"},
   {q:"Which multiplicity notation means 'one or more'?",opts:["0..1","1","*","1..*"],ans:3,ex:"1..* = one or more. * = zero or more. 0..1 = zero or one. 1 = exactly one.",cat:"class"},
-  {q:"A class attribute marked with '#' has which visibility?",opts:["public","private","protected","package"],ans:2,ex:"# = protected — accessible by the same class AND derived (child) classes.",cat:"class"},
-  {q:"In a Package Diagram, which dependency type means 'one package imports the functionality of another'?",opts:["«access»","«extend»","«include»","«import»"],ans:3,ex:"«import» = imports functionality. «access» = requires help from functions of another package.",cat:"class"},
-  {q:"A student can take many courses, and many students can be enrolled in one course. What is the correct multiplicity?",opts:["Student 1 takes Course 1","Student * takes Course *","Student 1..* takes Course 0..1","Student 0..1 takes Course 1"],ans:1,ex:"Many-to-many relationship: Student * ↔ * Course — طالب كتير كورسات وكورس كتير طلاب.",cat:"class"},
-  {q:"Which visibility level allows access to members of derived classes but NOT to any other class?",opts:["public (+)","private (-)","protected (#)","package (~)"],ans:2,ex:"Protected (#): same class = yes, derived classes = yes, any other class = NO.",cat:"class"},
-  // SEQUENCE DIAGRAM
-  {q:"In a Sequence Diagram, what does a Lifeline represent?",opts:["The entire system","An individual participant in the interaction","A group of related objects","A combined fragment"],ans:1,ex:"'A lifeline represents an individual participant in the Interaction' — من المحاضرة.",cat:"seq"},
-  {q:"Which type of message in a Sequence Diagram represents passing information back to the caller?",opts:["Call Message","Self Message","Return Message","Destroy Message"],ans:2,ex:"Return Message = 'represents the pass of information back to the caller of a corresponded former message.'",cat:"seq"},
-  {q:"What does an Activation bar on a lifeline represent?",opts:["The creation of a new object","The period during which an element is performing an operation","A synchronous message","The destruction of an object"],ans:1,ex:"Activation = 'represents the period during which an element is performing an operation.'",cat:"seq"},
-  {q:"In a Combined Fragment, which operator is used for conditional branching (if/else)?",opts:["loop","opt","alt","ref"],ans:2,ex:"alt = Alternative — 'only the one whose condition is true will execute.' زي الـ if/else.",cat:"seq"},
-  {q:"What is the difference between 'opt' and 'alt' combined fragments?",opts:["opt has multiple traces, alt has one","opt executes all branches, alt executes one","opt has only one trace, alt may have multiple traces","opt and alt are identical"],ans:2,ex:"opt = 'Equivalent to an alt only with one trace.' alt بيكون عنده multiple alternatives.",cat:"seq"},
-  {q:"In a Sequence Diagram, how is the time dimension represented?",opts:["Horizontally, from left to right","Vertically, progressing down the page","By the thickness of the lifeline","By the activation bar width"],ans:1,ex:"'The vertical axis represents time proceedings (progressing) down the page.' من المحاضرة.",cat:"seq"},
+  {q:"In a Package Diagram، which dependency type means 'one package imports the functionality of another'?",opts:["«access»","«extend»","«include»","«import»"],ans:3,ex:"«import» = imports functionality. «access» = requires help from functions. الاثنين معكوسين كتير!",cat:"class"},
+  {q:"Which visibility level allows access to derived classes but NOT to any other class?",opts:["public (+)","private (-)","protected (#)","package (~)"],ans:2,ex:"Protected (#): same class = yes، derived classes = yes، any other class = NO.",cat:"class"},
+  // SEQUENCE
+  {q:"In a Sequence Diagram، what does a Lifeline represent?",opts:["The entire system","An individual participant in the interaction","A group of related objects","A combined fragment"],ans:1,ex:"'A lifeline represents an individual participant in the Interaction' — من المحاضرة.",cat:"seq"},
+  {q:"Which type of message passes information back to the caller?",opts:["Call Message","Self Message","Return Message","Destroy Message"],ans:2,ex:"Return Message = 'represents the pass of information back to the caller.'",cat:"seq"},
+  {q:"In a Combined Fragment، which operator is used for conditional branching (if/else)?",opts:["loop","opt","alt","ref"],ans:2,ex:"alt = Alternative — 'only the one whose condition is true will execute.' زي الـ if/else.",cat:"seq"},
+  {q:"What is the difference between 'opt' and 'alt' combined fragments?",opts:["opt has multiple traces، alt has one","opt executes all branches، alt executes one","opt has only one trace، alt may have multiple traces","opt and alt are identical"],ans:2,ex:"opt = 'Equivalent to an alt only with one trace.' alt بيكون عنده multiple alternatives.",cat:"seq"},
+  {q:"In a Sequence Diagram، how is the time dimension represented?",opts:["Horizontally، left to right","Vertically، progressing down","By activation bar width","By lifeline thickness"],ans:1,ex:"'The vertical axis represents time proceedings down the page.' — من المحاضرة.",cat:"seq"},
 ];
 
 const essayData=[
-  {q:"What is a Class Diagram? Explain its components, visibility modifiers, and the four types of class relationships.",
-  ans:`<strong>Class Diagram</strong> = يوضح الـ static structure للـ classifiers في النظام. بيُستخدم كأساس لـ structure diagrams أخرى في UML.<br><br>
-<strong>المكونات الثلاثة لكل Class:</strong><br>
-(1) <strong>Class Name</strong>: في القسم الأول<br>
-(2) <strong>Attributes</strong>: في القسم الثاني — اسم الـ attribute: type (e.g., +name : String)<br>
-(3) <strong>Operations (Methods)</strong>: في القسم الثالث — method signature مع return type<br><br>
+  {q:"Describe the 7 phases of the Software Process. What is special about Testing and Documentation?",
+  ans:`<strong>Software Process</strong> = roadmap for producing high quality software. يتكون من 7 مراحل:<br><br>
+<strong>1. Requirements Phase</strong>: Gathering → Capturing → Validation (via prototyping) → Deliverable: requirements document<br>
+<strong>2. Specification Phase</strong>: Describes functionality precisely. يجب ألا يكون ambiguous، incomplete، أو contradictory. SQA checks + review by SQA، spec team، client.<br>
+<strong>3. Design Phase</strong>: High-level design (graphical structure) + Detailed design (precise module specs). SQA checks for logic faults، interface faults.<br>
+<strong>4. Implementation Phase</strong>: Code the design. Code review + desk checking (informal by programmer) + SQA testing.<br>
+<strong>5. Integration Phase</strong>: In <strong>parallel</strong> with Implementation. Correctness + Robustness testing. Acceptance testing by client. Alpha version → Beta version.<br>
+<strong>6. Maintenance Phase</strong>: Any change after client acceptance. 4 types: Adaptive، Perfective، Corrective، Preventive. Regression testing after each change. Constitutes <strong>67% of total cost</strong>.<br>
+<strong>7. Retirement</strong>: When software becomes un-maintainable (drastic design change needed، new hardware، missing documentation).<br><br>
+<strong>Special:</strong> Testing و Documentation <strong>بيحصلوا في كل المراحل</strong> — مش phase مستقلة في الآخر.`
+  },
+  {q:"Explain the 5 SW-CMM maturity levels with their key characteristics.",
+  ans:`<strong>SW-CMM</strong> (Software Capability Maturity Model) من SEI/Carnegie Mellon — 5 مستويات متدرجة:<br><br>
+<strong>Level 1 — Initial</strong>: Ad hoc، occasionally chaotic. Depends on current staff. Unpredictable. Management = crisis response. معظم المنظمات هنا.<br>
+<strong>Level 2 — Repeatable</strong>: Basic project management. Planning based on previous similar projects. Measurements for tracking costs/schedules.<br>
+<strong>Level 3 — Defined</strong>: Process fully documented & standardized. CASE environments applicable. Reviews for quality improvement.<br>
+<strong>Level 4 — Managed</strong>: Detailed measures of product & process quality. Statistical quality controls. Continual monitoring of quality & productivity.<br>
+<strong>Level 5 — Optimizing</strong>: Continuous process improvement. Knowledge from each project used in future. Statistical controls.<br><br>
+<strong>Timeline:</strong> 3-5 years to go from Level 1 → 2. 1.5-3 years from Level 2 → 3.<br>
+<strong>Other standards:</strong> ISO 9000 (required for EU business) + ISO/IEC 15504 (SPICE)`
+  },
+  {q:"What is a Class Diagram? Explain its components، visibility modifiers، and the four types of class relationships.",
+  ans:`<strong>Class Diagram</strong> = يوضح الـ static structure للـ classifiers في النظام.<br><br>
+<strong>المكونات:</strong><br>
+(1) <strong>Class Name</strong> (أول قسم)<br>
+(2) <strong>Attributes</strong> (ثاني قسم) — name: type<br>
+(3) <strong>Operations</strong> (ثالث قسم) — name(params): returnType<br><br>
 <strong>Visibility Modifiers:</strong><br>
 • <strong>+ (public)</strong>: accessible by any class<br>
-• <strong>- (private)</strong>: accessible by same class only<br>
-• <strong># (protected)</strong>: accessible by same class + derived classes<br>
-• <strong>~ (package)</strong>: accessible by classes in the same package<br><br>
-<strong>أنواع العلاقات الأربعة:</strong><br>
-(1) <strong>Inheritance</strong>: "is-a". Solid line + hollow arrowhead من الـ child للـ parent.<br>
-(2) <strong>Simple Association</strong>: خط صلب بسيط بين كلاسين. بيبين وجود علاقة بينهم.<br>
-(3) <strong>Aggregation (◇)</strong>: "part-of". Objects لهم separate lifetimes. Unfilled diamond.<br>
-مثال: Computer ◇— Mainboard. الـ Mainboard يمكن يعيش بدون Computer.<br>
-(4) <strong>Composition (◆)</strong>: "part-of" مع dependency. Parts بتتدمر لما الـ whole بيتدمر. Filled diamond.<br>
-مثال: Person ◆— Head. الـ Head مش بتعيش بدون Person.`
+• <strong>- (private)</strong>: same class only<br>
+• <strong># (protected)</strong>: same class + derived classes<br>
+• <strong>~ (package)</strong>: same package only<br><br>
+<strong>4 أنواع Relationships:</strong><br>
+(1) <strong>Inheritance</strong>: "is-a". Solid line + hollow arrowhead من child للـ parent.<br>
+(2) <strong>Simple Association</strong>: plain solid line. Structural link between classes.<br>
+(3) <strong>Aggregation (◇)</strong>: "part-of" مع استقلالية. Separate lifetimes. مثال: Computer ◇— CPU.<br>
+(4) <strong>Composition (◆)</strong>: "part-of" بدون استقلالية. Parts die with whole. مثال: Person ◆— Head.`
   },
-  {q:"Explain Package Diagrams: what are they, when to use them, and what are the types of dependencies?",
-  ans:`<strong>Package Diagram</strong> = نوع من الـ Structure Diagrams بيوضح ترتيب وتنظيم الـ model elements في المشاريع المتوسطة والكبيرة.<br><br>
-<strong>متى نستخدمه؟</strong><br>
-• لتنظيم المشاريع الكبيرة التي تحتوي على diagrams, documents, وdeliverables<br>
-• لتبسيط complex class diagrams بتجميع classes في packages<br>
-• لتوضيح dependencies بين الـ subsystems أو modules<br><br>
-<strong>Notation:</strong><br>
-• الـ Packages تتمثل كـ file folders (مستطيل بزاوية صغيرة في الأعلى)<br>
-• اسم الـ package على الـ tab أو داخل المستطيل<br>
-• Dotted arrows = dependencies<br><br>
-<strong>أنواع الـ Dependencies:</strong><br>
-• <strong>«import»</strong>: Package imports functionality من package أخرى (one-way)<br>
-• <strong>«access»</strong>: Package تحتاج مساعدة من functions الـ package الأخرى<br><br>
-<strong>Constraints:</strong><br>
-• Package names لازم تكون unique في النظام<br>
-• Classes داخل packages مختلفة ممكن تتشارك نفس الاسم<br>
-• Fully qualified name: java::util::Date`
-  },
-  {q:"What is a Sequence Diagram? Explain its notation and the types of combined fragments with an example.",
-  ans:`<strong>Sequence Diagram</strong> = Interaction Diagram بيوضح كيف الـ objects بتتفاعل خلال الزمن في سياق معين.<br><br>
-<strong>الأبعاد:</strong><br>
-• Object Dimension (أفقي): الـ elements المشاركة — من اليسار لليمين حسب دورهم<br>
-• Time Dimension (رأسي): الوقت بيتقدم نزولاً<br><br>
-<strong>Notation:</strong><br>
-• <strong>Actor</strong>: Stick figure — entity خارجي بيتفاعل مع النظام<br>
-• <strong>Lifeline</strong>: مستطيل + خط منقط رأسي — individual participant<br>
-• <strong>Activation</strong>: مستطيل رفيع — الفترة اللي الـ element بيؤدي فيها operation<br>
-• <strong>Call Message</strong>: خط صلب + سهم مملوء — invocation of operation<br>
-• <strong>Return Message</strong>: خط منقط + سهم مفتوح — pass information back to caller<br>
-• <strong>Self/Recursive Message</strong>: سهم للنفس — internal call or recursion<br>
-• <strong>Destroy Message</strong>: رسالة + X — destroys lifecycle of target<br><br>
-<strong>Combined Fragments:</strong><br>
-• <strong>alt</strong>: Alternative — if/else. فقط اللي شرطه صح هيتنفذ<br>
-• <strong>loop</strong>: تكرار — بيتنفذ أكتر من مرة بناءً على guard<br>
-• <strong>opt</strong>: Optional — زي alt بـ trace واحد فقط<br><br>
-<strong>مثال: Facebook Authentication</strong><br>
-User → WebBrowser → Application → Auth Server<br>
-[loop: for each request] → [alt: permission granted] → access token → protected resource<br>
-[else: no permission] → error notification`
-  },
-  {q:"Explain the four types of class relationships in UML with examples and how to distinguish them visually.",
-  ans:`أنواع الـ Relationships في Class Diagrams:<br><br>
-<strong>1. Inheritance (Generalization) — "is-a"</strong><br>
-• الشكل: Solid line + hollow (unfilled) arrowhead من الـ child للـ parent<br>
-• مثال: Muscle Cell is-a Cell. SubClass1 و SubClass2 هما specializations من SuperClass<br>
-• ملاحظة: Abstract class اسمه بيتكتب بـ italics<br><br>
-<strong>2. Simple Association</strong><br>
-• الشكل: Solid line بسيط بين كلاسين<br>
-• بيبين إن في علاقة بين الكلاسين بدون تحديد طبيعتها<br>
-• أسماء العلاقات بتتكتب في المنتصف مع سهم صغير للاتجاه<br>
-• مثال: Student takes Course (Student * → * Course)<br><br>
-<strong>3. Aggregation — "part-of" مع استقلالية</strong><br>
-• الشكل: Solid line + UNFILLED diamond (◇) عند الـ whole class<br>
-• Objects لها separate lifetimes — الـ part تعيش بدون الـ whole<br>
-• مثال: Computer ◇— CPU. لو دمرت الـ Computer، الـ CPU لسه موجود<br><br>
-<strong>4. Composition — "part-of" بدون استقلالية</strong><br>
-• الشكل: Solid line + FILLED diamond (◆) عند الـ whole class<br>
-• Parts بتتدمر لما الـ whole بيتدمر — Class2 cannot stand by itself<br>
-• مثال: Person ◆— Head. لو الـ Person مات، الـ Head مش موجود<br><br>
-<strong>خلاصة التمييز البصري:</strong><br>
-Inheritance = hollow arrowhead<br>
-Association = plain line<br>
-Aggregation = hollow diamond (◇)<br>
-Composition = filled diamond (◆)`
-  },
-  {q:"Explain Verification and Validation with their differences, timing, and activities.",
-  ans:`<strong>Verification</strong> = تقييم المنتجات الوسيطة للتأكد إننا على المسار الصح.<br>
-السؤال: "Are we building the thing right?" — هل مطابق للـ design specs والـ SRS؟<br><br>
-<strong>Validation</strong> = تقييم المنتج النهائي للتأكد إنه بيلبي احتياجات العمل الحقيقية.<br>
-السؤال: "Are we building the right thing?" — هل بيرضي المستخدم الفعلي؟<br><br>
+  {q:"Explain Verification and Validation with their differences، timing، and activities.",
+  ans:`<strong>Verification</strong> = evaluating intermediary work products.<br>
+السؤال: "Are we building the thing <strong>right</strong>?" — هل مطابق للـ design specs؟<br><br>
+<strong>Validation</strong> = evaluating the final product.<br>
+السؤال: "Are we building the <strong>right</strong> thing?" — هل بيرضي احتياج العميل الحقيقي؟<br><br>
 <strong>المقارنة:</strong><br>
-التوقيت: Verification أثناء التطوير (intermediary) | Validation في النهاية (final)<br>
-الهدف: Verification = مطابقة المتطلبات والـ specs | Validation = تلبية احتياجات المستخدم<br>
-الأنشطة: Verification = Reviews, meetings, inspections | Validation = Black/white/grey box testing<br>
-المرجع: Verification = Design specs & SRS | Validation = احتياج العميل الحقيقي<br><br>
-<strong>مثال:</strong><br>
-Verification: code review للتأكد من مطابقة الكود للـ design specs<br>
-Validation: User Acceptance Testing — المستخدم الحقيقي يجرب النظام`
+• التوقيت: Verification = intermediary | Validation = final product<br>
+• الأنشطة: Verification = Reviews، meetings، inspections | Validation = smoke، functional، regression، systems testing<br>
+• المرجع: Verification = Design specs & SRS | Validation = real business need<br><br>
+<strong>RTM Benefits:</strong> (1) Scope management، (2) Quick evaluation of changes، (3) Reduced project risk، (4) Promotes consistency، (5) Lifecycle monitoring`
+  },
+  {q:"Describe the 5 difficulties of Requirements Elicitation and explain the 4 steps of the elicitation process.",
+  ans:`<strong>5 Difficulties of Requirements Elicitation:</strong><br>
+(1) <strong>Articulation Problems</strong>: Users may not know their needs or be afraid to articulate them. Developers may not listen.<br>
+(2) <strong>Communication Barriers</strong>: Users and developers have different professional vocabularies.<br>
+(3) <strong>Knowledge/Cognitive Limitations</strong>: Elicitor needs domain knowledge. People state problems in terms of favored solutions.<br>
+(4) <strong>Human Behavior Issues</strong>: Fear of software causing changes، including job loss.<br>
+(5) <strong>Technical Issues</strong>: Requirements change over time. Technologies change rapidly.<br><br>
+<strong>4 Steps of Elicitation Process:</strong><br>
+<strong>Step 1 — Choose approach</strong>: Based on organization، project nature، personal strengths. No single technique fits all.<br>
+<strong>Step 2 — Preparation</strong>: Establish objective، participants، resources، questions، agenda (start/end times).<br>
+<strong>Step 3 — Conduct</strong> (4 stages): Introduction (tone setting) → Body (execute technique) → Close (closing questions) → Follow-up (clarify، verify accuracy).<br>
+<strong>Step 4 — Analyze Results</strong>: Summarize، identify keywords. Tools: QVscribe، NVivo.`
   },
 ];
 
 const trapsData=[
-  {title:"'+' = private في Class Diagram",p:"الخلط بين visibility symbols.",fix:"✅ + = public. - = private. # = protected. ~ = package. ده من أكتر الأخطاء في الامتحانات!"},
+  {title:"'+' = private في Class Diagram",p:"الخلط بين visibility symbols.",fix:"✅ + = public. - = private. # = protected. ~ = package. ده أكثر خطأ في الامتحانات!"},
   {title:"Aggregation = Composition",p:"الاعتقاد إن الاثنين نفس الشيء.",fix:"✅ Aggregation ◇ = separate lifetimes (part تعيش مستقلة). Composition ◆ = parts بتموت مع الـ whole."},
-  {title:"Inheritance arrow = filled arrowhead",p:"رسم سهم مملوء للـ Inheritance.",fix:"✅ Inheritance = solid line + HOLLOW (unfilled) arrowhead. Composition = filled diamond — مش arrowhead!"},
-  {title:"Return Message = solid line",p:"رسم الـ Return Message كـ Call Message.",fix:"✅ Return Message = خط منقط (dashed) + سهم. Call Message = خط صلب (solid) + سهم مملوء."},
-  {title:"Time axis في Sequence أفقي",p:"الاعتقاد إن الـ time axis أفقي.",fix:"✅ Time axis = رأسي نازل من فوق لتحت. الـ horizontal axis = الـ objects/participants."},
+  {title:"Inheritance arrow = filled arrowhead",p:"رسم سهم مملوء للـ Inheritance.",fix:"✅ Inheritance = solid line + HOLLOW (unfilled) arrowhead. Composition = filled DIAMOND — مش arrowhead!"},
+  {title:"Return Message = solid line",p:"رسم الـ Return Message كـ Call Message.",fix:"✅ Return Message = خط منقط (dashed) + سهم. Call Message = خط صلب (solid)."},
+  {title:"Time axis في Sequence أفقي",p:"الاعتقاد إن الـ time axis أفقي.",fix:"✅ Time axis = رأسي نازل من فوق لتحت. الـ horizontal axis = الـ participants."},
   {title:"«import» = requires help",p:"الخلط بين «import» و «access» في Package Diagrams.",fix:"✅ «import» = imports full functionality. «access» = requires help from functions of another package."},
-  {title:"Package names مش unique",p:"الاعتقاد إن Package names ممكن تتكرر.",fix:"✅ Package names لازم unique في النظام. Classes جوا packages مختلفة ممكن تتشارك الاسم."},
   {title:"Testing = مرحلة في الآخر فقط",p:"الاعتقاد إن Testing بتحصل بس في نهاية الـ process.",fix:"✅ Testing و Documentation بيحصلوا في كل المراحل — مش بس في النهاية!"},
   {title:"سهم «extend» من Base للـ Extension",p:"رسم سهم الـ extend في الاتجاه الغلط.",fix:"✅ الاتجاه الصح: من الـ Extension → إلى الـ Base."},
   {title:"Actors داخل الـ System Boundary",p:"رسم الـ actors جوا المستطيل في Use Case Diagram.",fix:"✅ Actors دايماً بره الـ System Boundary. Use Cases جوا."},
   {title:"Activity = State Machine",p:"الخلط بين Activity Diagram وState Machine.",fix:"✅ Activity = تدفق الأنشطة (Process). State Machine = حالات كائن واحد (Lifecycle)."},
-  {title:"Non-Functional مش لازم رقم",p:"كتابة NFR بدون قياس محدد.",fix:"✅ Non-Functional دايماً لازم يكون measurable بأرقام محددة."},
-  {title:"opt = نفس alt",p:"الخلط بين opt و alt في Sequence Diagrams.",fix:"✅ opt = alt بـ trace واحد فقط (condition واحد). alt عنده multiple alternatives (if/else)."},
-  {title:"Sign-off = نهاية التطوير",p:"اعتبار Sign-off نهاية الكودينج.",fix:"✅ Sign-off = موافقة الـ stakeholders على المتطلبات. بيحصل قبل التطوير — مش بعده!"},
+  {title:"Alpha = Corrected، Beta = First",p:"عكس تعريفي Alpha وBeta.",fix:"✅ Alpha = أول نسخة للـ selected users. Beta = الـ corrected alpha version."},
+  {title:"Corrective = environment changes",p:"الخلط بين Corrective وAdaptive maintenance.",fix:"✅ Corrective = fix user-found errors. Adaptive = cope with environment changes (OS/DBMS)."},
+  {title:"CASE environments = Level 1 & 2",p:"الاعتقاد إن CASE environments متاحة من Level 1.",fix:"✅ CASE environments are applicable starting from Level 3 — NOT at levels 1 or 2!"},
+  {title:"Sign-off = نهاية التطوير",p:"اعتبار Sign-off نهاية الكودينج.",fix:"✅ Sign-off = موافقة الـ stakeholders على المتطلبات — بيحصل قبل التطوير!"},
+  {title:"Non-Functional مش لازم رقم",p:"كتابة NFR بدون قياس محدد.",fix:"✅ Non-Functional دايماً لازم measurable بأرقام. 'The system should be fast' غلط!"},
+  {title:"opt = نفس alt",p:"الخلط بين opt و alt في Sequence Diagrams.",fix:"✅ opt = alt بـ trace واحد فقط (condition واحد). alt = multiple alternatives (if/else)."},
+  {title:"Fragment operator في الركن الأيمن",p:"كتابة الـ operator في الركن الخطأ.",fix:"✅ Combined Fragment operator يتكتب في الركن العلوي الأيسر — مش الأيمن."},
 ];
 
 // ===== T/F =====
@@ -1454,26 +1429,14 @@ function renderTF(filter='all'){
   list.innerHTML=items.map((t,i)=>`
     <div class="tf-item" data-cat="${t.cat}">
       <div class="tf-stmt">${i+1}. ${t.s}</div>
-      <button class="tf-toggle" onclick="showTF(this)">${'👁 إظهار الإجابة'}</button>
-      <div class="tf-answer ${t.ans?'tf-true':'tf-false'}">${t.ans?'<i class="fa-solid fa-check"></i> صح (TRUE)':'<i class="fa-solid fa-xmark"></i> غلط (FALSE)'} — ${t.ex}</div>
+      <button class="tf-toggle" onclick="showTF(this)">👁 Show Answer</button>
+      <div class="tf-answer ${t.ans?'tf-true':'tf-false'}">${t.ans?'<i class="fa-solid fa-check"></i> True (صح)':'<i class="fa-solid fa-xmark"></i> False (غلط)'} — ${t.ex}</div>
     </div>
   `).join('');
 }
-function showTF(btn){
-  const ans=btn.nextElementSibling;
-  ans.classList.toggle('show');
-  btn.textContent=ans.classList.contains('show')?'🙈 إخفاء':'👁 إظهار الإجابة';
-}
-function toggleAllTF(){
-  allTFShowing=!allTFShowing;
-  document.querySelectorAll('.tf-answer').forEach(a=>a.classList.toggle('show',allTFShowing));
-  document.querySelectorAll('.tf-toggle').forEach(b=>b.textContent=allTFShowing?'🙈 إخفاء':'👁 إظهار الإجابة');
-}
-function filterTF(cat,btn){
-  document.querySelectorAll('#tf .filter-btn').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
-  renderTF(cat);
-}
+function showTF(btn){const ans=btn.nextElementSibling;ans.classList.toggle('show');btn.textContent=ans.classList.contains('show')?'🙈 Hide':'👁 Show Answer';}
+function toggleAllTF(){allTFShowing=!allTFShowing;document.querySelectorAll('.tf-answer').forEach(a=>a.classList.toggle('show',allTFShowing));document.querySelectorAll('.tf-toggle').forEach(b=>b.textContent=allTFShowing?'🙈 Hide':'👁 Show Answer');}
+function filterTF(cat,btn){document.querySelectorAll('#tf .filter-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderTF(cat);}
 
 // ===== MCQ =====
 let score=0,currentFilter='all';
@@ -1483,9 +1446,10 @@ function renderMCQ(filter='all'){
   const items=filter==='all'?mcqData:mcqData.filter(q=>q.cat===filter);
   document.getElementById('total-q').textContent=items.length;
   document.getElementById('score').textContent=score=0;
+  const catLabels={se:'SE Intro',proc:'SW Process',req:'Requirements',srs:'SRS & V&V',uml:'UML',class:'Class Diagram',seq:'Sequence'};
   list.innerHTML=items.map((q,i)=>`
     <div class="mcq-card" data-cat="${q.cat}">
-      <div class="mcq-tag">${{se:'SE Intro',req:'Requirements',srs:'SRS & V&V',uml:'UML',class:'Class Diagram',seq:'Sequence'}[q.cat]||q.cat}</div>
+      <div class="mcq-tag">${catLabels[q.cat]||q.cat}</div>
       <div class="mcq-q">${i+1}. ${q.q}</div>
       <div class="mcq-options">${q.opts.map((o,j)=>`<div class="mcq-opt" onclick="answerMCQ(this,${j},${q.ans},${i})" data-idx="${j}">${['A','B','C','D'][j]}. ${o}</div>`).join('')}</div>
       <div class="mcq-explain" id="mcq-ex-${i}"><i class="fa-solid fa-lightbulb" style="color:var(--yellow2)"></i> التفسير: ${q.ex}</div>
@@ -1494,18 +1458,14 @@ function renderMCQ(filter='all'){
 }
 function answerMCQ(el,chosen,correct,idx){
   const card=el.closest('.mcq-card');
-  if(card.classList.contains('answered')) return;
+  if(card.classList.contains('answered'))return;
   card.classList.add('answered');
   card.querySelectorAll('.mcq-opt').forEach(o=>o.classList.add('disabled'));
   if(parseInt(el.dataset.idx)===correct){el.classList.add('correct');document.getElementById('score').textContent=++score;}
   else{el.classList.add('wrong');card.querySelectorAll('.mcq-opt')[correct].classList.add('correct');}
   document.getElementById(`mcq-ex-${idx}`).classList.add('show');
 }
-function filterMCQ(cat,btn){
-  document.querySelectorAll('#mcq .filter-btn').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
-  renderMCQ(cat);
-}
+function filterMCQ(cat,btn){document.querySelectorAll('#mcq .filter-btn').forEach(b=>b.classList.remove('active'));if(btn)btn.classList.add('active');renderMCQ(cat);}
 function resetMCQ(){renderMCQ(currentFilter);}
 
 // ===== ESSAYS =====
@@ -1537,10 +1497,7 @@ let openCard=-1;
 function toggleCard(idx){
   const card=document.getElementById('card-'+idx);
   if(openCard===idx){card.classList.remove('open');openCard=-1;}
-  else{
-    if(openCard>=0){const p=document.getElementById('card-'+openCard);if(p)p.classList.remove('open');}
-    card.classList.add('open');openCard=idx;
-  }
+  else{if(openCard>=0){const p=document.getElementById('card-'+openCard);if(p)p.classList.remove('open');}card.classList.add('open');openCard=idx;}
 }
 
 // ===== TABS =====
@@ -1548,16 +1505,13 @@ function switchTab(id,btn){
   document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  if(btn) btn.classList.add('active');
+  if(btn)btn.classList.add('active');
 }
-function toggleAnswer(id){
-  const el=document.getElementById(id);
-  el.style.display=el.style.display==='none'||el.style.display===''?'block':'none';
-}
+function toggleAnswer(id){const el=document.getElementById(id);el.style.display=el.style.display==='none'||el.style.display===''?'block':'none';}
 
 // ===== PROGRESS =====
-const TOTAL=10;let progress=[];
-try{progress=JSON.parse(localStorage.getItem('se_progress_v5')||'[]');}catch(e){progress=[];}
+const TOTAL=12;let progress=[];
+try{progress=JSON.parse(localStorage.getItem('se_progress_v6')||'[]');}catch(e){progress=[];}
 function renderProgress(){
   document.querySelectorAll('.topic-check').forEach((c,i)=>c.classList.toggle('done',progress.includes(i)));
   const pct=Math.round((progress.length/TOTAL)*100);
@@ -1567,10 +1521,10 @@ function renderProgress(){
 function toggleTopic(i){
   const idx=progress.indexOf(i);
   if(idx===-1)progress.push(i);else progress.splice(idx,1);
-  try{localStorage.setItem('se_progress_v5',JSON.stringify(progress));}catch(e){}
+  try{localStorage.setItem('se_progress_v6',JSON.stringify(progress));}catch(e){}
   renderProgress();showNotify();
 }
-function clearProgress(){progress=[];try{localStorage.setItem('se_progress_v5',JSON.stringify(progress));}catch(e){}renderProgress();}
+function clearProgress(){progress=[];try{localStorage.setItem('se_progress_v6',JSON.stringify(progress));}catch(e){}renderProgress();}
 
 // ===== SCROLL =====
 window.addEventListener('scroll',()=>{
@@ -1586,20 +1540,15 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 // ===== SEARCH =====
 document.getElementById('search-input').addEventListener('input',function(){
   const q=this.value.toLowerCase().trim();
-  document.querySelectorAll('.topic-card,.tf-item,.mcq-card,.essay-card,.trap-card').forEach(el=>{
-    el.style.display=(!q||el.textContent.toLowerCase().includes(q))?'':'none';
-  });
+  document.querySelectorAll('.topic-card,.tf-item,.mcq-card,.essay-card,.trap-card').forEach(el=>{el.style.display=(!q||el.textContent.toLowerCase().includes(q))?'':'none';});
 });
 
 // ===== NOTIFY =====
-function showNotify(){
-  const n=document.getElementById('notify');
-  n.classList.add('show');
-  setTimeout(()=>n.classList.remove('show'),2000);
-}
+function showNotify(){const n=document.getElementById('notify');n.classList.add('show');setTimeout(()=>n.classList.remove('show'),2000);}
 
 // ===== INIT =====
 renderTF();renderMCQ();renderEssays();renderTraps();renderProgress();
 </script>
 </body>
+</html>
 </html>
